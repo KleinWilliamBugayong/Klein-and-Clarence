@@ -1,102 +1,533 @@
-
-    gap: 25px;
+gap: 25px;
 }
-
 
 .nav-links a {
     color: #aab7c9;
-
     transition: 0.3s;
 }
-
 
 .nav-links a:hover {
     color: white;
 }
 
-
-/* ==============================
-   HERO
-============================== */
-
 .hero {
     min-height: 650px;
-
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
     padding: 120px 20px 80px;
-
-    background:
-
-        radial-gradient(
-            circle at top,
-            #18385f,
-            #07111f 60%
-        );
+    background: radial-gradient(
+        circle at top,
+        #18385f,
+        #07111f 60%
+    );
 }
-
 
 .hero-content {
     max-width: 800px;
 }
 
-
 .label {
     color: #60a5fa;
-
     font-size: 12px;
-
     letter-spacing: 4px;
-
     font-weight: bold;
-
     margin-bottom: 20px;
 }
-
 
 .hero h1 {
     font-size: clamp(45px, 8vw, 85px);
-
     line-height: 1;
-
     margin-bottom: 20px;
 }
-
 
 .hero h1 span {
     color: #60a5fa;
 }
 
-
 .hero h2 {
     font-size: 22px;
-
     color: #cbd5e1;
-
     font-weight: normal;
 }
 
-
 .hero-description {
     color: #94a3b8;
-
     max-width: 550px;
-
-    margin:
-        25px auto
-        35px;
-
+    margin: 25px auto 35px;
     line-height: 1.7;
 }
 
-
 .main-button {
     display: inline-block;
+    padding: 15px 25px;
+    background: #2563eb;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: #3b82f6;
+    transform: translateY(-3px);
+}
+
+.profiles {
+    padding: 90px 7%;
+    background: #0b1626;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading > p {
+    color: #60a5fa;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.section-heading span {
+    color: #94a3b8;
+}
+
+.profile-grid {
+    max-width: 950px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.profile-card {
+    background: #111e31;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.35s;
+}
+
+.profile-card:hover {
+    transform: translateY(-8px);
+    border-color: #3b82f6;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.profile-image {
+    width: 100%;
+    height: 330px;
+    background: #18273b;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.profile-card:hover .profile-image img {
+    transform: scale(1.05);
+}
+
+.profile-info {
+    padding: 25px;
+}
+
+.student {
+    color: #60a5fa !important;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.profile-info h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.profile-info > p {
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+.view-cv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-weight: bold;
+}
+
+.view-cv span {
+    color: #60a5fa;
+    font-size: 22px;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background: #050b14;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.cv-page {
+    background: #07111f;
+}
+
+.cv-navbar {
+    min-height: 75px;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    background: rgba(7, 17, 31, 0.96);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 100;
+}
+
+.cv-name {
+    font-weight: bold;
+}
+
+.back-button,
+.switch-button {
+    color: #60a5fa;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cv-viewer {
+    padding: 55px 20px 80px;
+}
+
+.cv-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cv-heading > p {
+    color: #60a5fa;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cv-heading h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 5px;
+}
+
+.cv-heading span {
+    color: #94a3b8;
+}
+
+.cv-images {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cv-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: white;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+}
+
+.bottom-navigation {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.bottom-navigation a {
+    color: #60a5fa;
+    font-weight: bold;
+}
+
+body.clarence-page {
+    margin: 0;
+    padding: 40px 20px;
+    background: #111;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clarence-cv {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 1050px;
+    margin: 0 auto;
+    padding: 55px 60px;
+    background: #f5f5f5;
+    color: #222;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+
+.clarence-header {
+    text-align: center;
+    padding-bottom: 22px;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #333;
+}
+
+.clarence-header h1 {
+    margin: 0;
+    color: #222;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 9px;
+}
+
+.clarence-layout {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 55px;
+}
+
+.clarence-left,
+.clarence-right {
+    min-width: 0;
+}
+
+.clarence-section {
+    margin-bottom: 30px;
+}
+
+.clarence-section h2 {
+    margin: 0 0 10px;
+    color: #222;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.clarence-left .clarence-section h2 {
+    padding-bottom: 7px;
+    border-bottom: 1px solid #333;
+}
+
+.clarence-section h3 {
+    margin: 18px 0 4px;
+    color: #222;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.clarence-cv p {
+    margin: 2px 0;
+    color: #222;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.clarence-cv a {
+    color: #222;
+}
+
+.clarence-left a {
+    overflow-wrap: anywhere;
+}
+
+.clarence-education {
+    margin-bottom: 20px;
+}
+
+.clarence-education strong {
+    display: block;
+    color: #222;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.clarence-about {
+    margin-bottom: 30px;
+}
+
+.clarence-project {
+    margin-bottom: 25px;
+}
+
+.clarence-project ul {
+    margin: 8px 0 0 35px;
+    padding-left: 15px;
+}
+
+.clarence-project li {
+    color: #222;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 3px;
+}
+
+.clarence-back {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 11px 18px;
+    background: #222;
+    color: #fff !important;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profiles {
+        padding: 70px 20px;
+    }
+
+    .profile-image {
+        height: 350px;
+    }
+
+    .cv-navbar {
+        padding: 15px;
+    }
+
+    .cv-name {
+        display: none;
+    }
+
+    .cv-viewer {
+        padding: 40px 10px 60px;
+    }
+
+    .cv-images {
+        gap: 15px;
+    }
+
+    .bottom-navigation {
+        padding: 0 5px;
+        font-size: 12px;
+    }
+
+    body.clarence-page {
+        padding: 15px;
+        background: #111;
+    }
+
+    .clarence-cv {
+        min-height: auto;
+        padding: 35px 25px;
+    }
+
+    .clarence-header {
+        margin-bottom: 30px;
+    }
+
+    .clarence-header h1 {
+        font-size: 26px;
+        letter-spacing: 4px;
+        line-height: 1.3;
+    }
+
+    .clarence-layout {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .clarence-about {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-links a:first-child {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .profile-image {
+        height: 300px;
+    }
+
+    .back-button,
+    .switch-button {
+        font-size: 12px;
+    }
+
+    .clarence-cv {
+        padding: 28px 18px;
+    }
+
+    .clarence-header h1 {
+        font-size: 23px;
+        letter-spacing: 3px;
+    }
+}
+
+@media print {
+    body.clarence-page {
+        padding: 0;
+        background: white;
+    }
+
+    .clarence-cv {
+        max-width: none;
+        min-height: 0;
+        padding: 30px 40px;
+        box-shadow: none;
+    }
+
+    .clarence-back {
+        display: none;
+    }
+}    display: inline-block;
 
     padding: 15px 25px;
 
