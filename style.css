@@ -1,3 +1,2621 @@
+
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07111f;
+    color: #ffffff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   MAIN NAVIGATION
+===================================================== */
+
+.navbar {
+    width: 100%;
+    height: 75px;
+
+    padding: 0 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    background: rgba(7, 17, 31, 0.95);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(12px);
+}
+
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+
+.logo span {
+    color: #60a5fa;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+}
+
+
+.nav-links a {
+    color: #aab7c9;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 120px 20px 80px;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #18385f,
+            #07111f 60%
+        );
+}
+
+
+.hero-content {
+    width: 100%;
+    max-width: 800px;
+}
+
+
+.label {
+    color: #60a5fa;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 85px);
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 span {
+    color: #60a5fa;
+}
+
+
+.hero h2 {
+    font-size: 22px;
+
+    color: #cbd5e1;
+
+    font-weight: normal;
+}
+
+
+.hero-description {
+    color: #94a3b8;
+
+    max-width: 550px;
+
+    margin: 25px auto 35px;
+
+    line-height: 1.7;
+}
+
+
+.main-button {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: #2563eb;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.main-button:hover {
+    background: #3b82f6;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   PROFILE SECTION
+===================================================== */
+
+.profiles {
+    padding: 90px 7%;
+
+    background: #0b1626;
+}
+
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+.section-heading > p {
+    color: #60a5fa;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+.section-heading h2 {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+
+.section-heading span {
+    color: #94a3b8;
+}
+
+
+/* =====================================================
+   PROFILE CARDS
+===================================================== */
+
+.profile-grid {
+    width: 100%;
+
+    max-width: 950px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 30px;
+}
+
+
+.profile-card {
+    display: block;
+
+    background: #111e31;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: 0.35s;
+}
+
+
+.profile-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.4);
+}
+
+
+.profile-image {
+    width: 100%;
+
+    height: 330px;
+
+    background: #18273b;
+
+    overflow: hidden;
+}
+
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+
+.profile-card:hover .profile-image img {
+    transform: scale(1.05);
+}
+
+
+.profile-info {
+    padding: 25px;
+}
+
+
+.student {
+    color: #60a5fa !important;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.profile-info h3 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+.profile-info > p {
+    color: #94a3b8;
+
+    line-height: 1.6;
+}
+
+
+.view-cv {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    font-weight: bold;
+}
+
+
+.view-cv span {
+    color: #60a5fa;
+
+    font-size: 22px;
+}
+
+
+/* =====================================================
+   MAIN FOOTER
+===================================================== */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #050b14;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   ORIGINAL CV VIEWER
+===================================================== */
+
+.cv-page {
+    background: #07111f;
+}
+
+
+.cv-navbar {
+    min-height: 75px;
+
+    padding: 15px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    position: sticky;
+
+    top: 0;
+
+    background:
+        rgba(7, 17, 31, 0.96);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    z-index: 100;
+}
+
+
+.cv-name {
+    font-weight: bold;
+}
+
+
+.back-button,
+.switch-button {
+    color: #60a5fa;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+.cv-viewer {
+    padding: 55px 20px 80px;
+}
+
+
+.cv-heading {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+.cv-heading > p {
+    color: #60a5fa;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+.cv-heading h1 {
+    font-size:
+        clamp(30px, 5vw, 48px);
+
+    margin-bottom: 5px;
+}
+
+
+.cv-heading span {
+    color: #94a3b8;
+}
+
+
+.cv-images {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+.cv-images img {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    background: white;
+
+    box-shadow:
+        0 15px 50px
+        rgba(0, 0, 0, 0.5);
+}
+
+
+.bottom-navigation {
+    max-width: 1000px;
+
+    margin: 40px auto 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.bottom-navigation a {
+    color: #60a5fa;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   CLARENCE CV
+===================================================== */
+
+.clarence-cv {
+    background: #f4f4f4;
+
+    color: #111;
+}
+
+
+.cv-topbar {
+    background: #0b0b0b;
+
+    padding: 18px 5%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    color: white;
+}
+
+
+.cv-topbar a {
+    color: white;
+
+    font-size: 13px;
+}
+
+
+.cv-topbar a:hover {
+    color: #d6c5a3;
+}
+
+
+.cv-paper {
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    background: #ffffff;
+
+    display: grid;
+
+    grid-template-columns:
+        35% 65%;
+
+    min-height: 1350px;
+
+    box-shadow:
+        0 10px 40px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+.cv-left {
+    background: #171717;
+
+    color: #ffffff;
+
+    padding: 55px 35px;
+}
+
+
+.cv-photo {
+    width: 190px;
+    height: 190px;
+
+    margin: 0 auto 30px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 5px solid #ffffff;
+}
+
+
+.cv-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.cv-left h1 {
+    text-align: center;
+
+    font-size: 27px;
+
+    line-height: 1.1;
+
+    margin-bottom: 8px;
+}
+
+
+.cv-left .job-title {
+    text-align: center;
+
+    color: #d6c5a3;
+
+    font-size: 13px;
+
+    margin-bottom: 35px;
+}
+
+
+.cv-left h2 {
+    color: #d6c5a3;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    margin-top: 30px;
+
+    margin-bottom: 12px;
+
+    border-bottom:
+        1px solid #555;
+
+    padding-bottom: 7px;
+}
+
+
+.cv-left p,
+.cv-left li {
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: #e7e7e7;
+}
+
+
+.cv-left ul {
+    padding-left: 18px;
+}
+
+
+.cv-right {
+    padding: 70px 55px;
+
+    color: #222;
+}
+
+
+.cv-right .big-name {
+    font-size: 48px;
+
+    line-height: 1;
+
+    margin-bottom: 8px;
+}
+
+
+.cv-right .big-name span {
+    color: #8a7654;
+}
+
+
+.cv-right .headline {
+    letter-spacing: 3px;
+
+    font-size: 14px;
+
+    color: #777;
+
+    margin-bottom: 50px;
+}
+
+
+.cv-section {
+    margin-bottom: 35px;
+}
+
+
+.cv-section h2 {
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+
+    padding-bottom: 7px;
+
+    border-bottom:
+        2px solid #111;
+}
+
+
+.cv-section p,
+.cv-section li {
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: #444;
+}
+
+
+.cv-item {
+    margin-bottom: 20px;
+}
+
+
+.cv-item h3 {
+    font-size: 15px;
+
+    margin-bottom: 4px;
+}
+
+
+.cv-item .date {
+    color: #8a7654;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =====================================================
+   KLEIN CV
+   Blue / Gray Design
+===================================================== */
+
+body.klein-page {
+    margin: 0;
+
+    padding: 35px 15px 60px;
+
+    background: #111820;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #222;
+}
+
+
+/* KLEIN TOP WEBSITE NAVIGATION */
+
+.klein-site-nav {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.klein-site-nav a {
+    padding: 11px 18px;
+
+    background: #345875;
+
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+
+.klein-site-nav a:hover {
+    background: #3475b6;
+}
+
+
+/* KLEIN CV PAPER */
+
+.klein-cv {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto 40px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 45px
+        rgba(0, 0, 0, 0.45);
+}
+
+
+/* BLUE HEADER DESIGN */
+
+.klein-top-bar {
+    width: 100%;
+
+    height: 90px;
+
+    display: grid;
+
+    grid-template-columns:
+        28% 13% 59%;
+}
+
+
+.klein-blue-dark {
+    background: #345875;
+}
+
+
+.klein-blue-medium {
+    background: #3475b6;
+}
+
+
+.klein-blue-light {
+    background: #6599ce;
+}
+
+
+/* MAIN KLEIN LAYOUT */
+
+.klein-layout {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        31% 69%;
+
+    align-items: stretch;
+}
+
+
+/* =====================================================
+   KLEIN LEFT SIDEBAR
+===================================================== */
+
+.klein-sidebar {
+    background: #eeeeee;
+
+    padding: 10px 12px 40px;
+
+    color: #111;
+}
+
+
+/* PROFILE PHOTO */
+
+.klein-photo {
+    width: 190px;
+    height: 190px;
+
+    margin: 0 auto 12px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+
+.klein-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* SIDEBAR NAME */
+
+.klein-sidebar-name {
+    text-align: center;
+
+    margin-bottom: 15px;
+}
+
+
+.klein-sidebar-name h2 {
+    margin: 0 0 6px;
+
+    color: #111;
+
+    font-size: 21px;
+
+    line-height: 1.15;
+}
+
+
+.klein-sidebar-name p {
+    margin: 0;
+
+    color: #111;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* SIDEBAR SECTIONS */
+
+.klein-side-section {
+    margin-bottom: 15px;
+}
+
+
+.klein-side-section h3 {
+    margin: 0 0 5px;
+
+    color: #345875;
+
+    font-size: 20px;
+
+    line-height: 1.05;
+}
+
+
+.klein-side-section p {
+    margin: 2px 0;
+
+    color: #222;
+
+    font-size: 14px;
+
+    line-height: 1.25;
+
+    overflow-wrap: anywhere;
+}
+
+
+.klein-side-section strong {
+    display: block;
+
+    color: #111;
+
+    font-size: 14px;
+
+    line-height: 1.2;
+}
+
+
+.klein-side-section ul {
+    margin: 4px 0 0;
+
+    padding-left: 22px;
+}
+
+
+.klein-side-section li {
+    color: #222;
+
+    font-size: 14px;
+
+    line-height: 1.25;
+}
+
+
+/* =====================================================
+   KLEIN RIGHT SIDE
+===================================================== */
+
+.klein-main {
+    background: #ffffff;
+
+    padding: 28px 20px 45px;
+
+    color: #222;
+}
+
+
+/* KLEIN NAME HEADER */
+
+.klein-header {
+    margin-bottom: 27px;
+}
+
+
+.klein-header h1 {
+    margin: 0;
+
+    color: #333333;
+
+    font-size: 38px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    letter-spacing: 1px;
+}
+
+
+.klein-header h1 span {
+    color: #345875;
+}
+
+
+.klein-header p {
+    margin: 8px 0 0;
+
+    color: #444444;
+
+    font-size: 21px;
+
+    letter-spacing: 1px;
+}
+
+
+/* KLEIN CONTENT SECTIONS */
+
+.klein-section {
+    margin-bottom: 12px;
+}
+
+
+.klein-section > h2 {
+    margin: 0 0 6px;
+
+    padding-bottom: 3px;
+
+    color: #345875;
+
+    font-size: 21px;
+
+    line-height: 1.1;
+
+    border-bottom:
+        2px solid #345875;
+}
+
+
+.klein-section > h3 {
+    margin: 0;
+
+    color: #111;
+
+    font-size: 16px;
+
+    line-height: 1.2;
+}
+
+
+.klein-section > p {
+    margin: 2px 0;
+
+    color: #222;
+
+    font-size: 14px;
+
+    line-height: 1.3;
+}
+
+
+/* KLEIN PROJECTS */
+
+.klein-project {
+    margin-bottom: 10px;
+}
+
+
+.klein-project h3 {
+    margin: 0;
+
+    color: #111;
+
+    font-size: 17px;
+
+    line-height: 1.15;
+}
+
+
+.klein-project strong {
+    display: block;
+
+    margin-top: 1px;
+
+    color: #555;
+
+    font-size: 12px;
+}
+
+
+.klein-project em {
+    display: block;
+
+    margin-top: 1px;
+
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+.klein-project ul {
+    margin: 3px 0 0;
+
+    padding-left: 25px;
+}
+
+
+.klein-project li {
+    color: #333;
+
+    font-size: 13px;
+
+    line-height: 1.25;
+}
+
+
+/* =====================================================
+   KLEIN PAGE TWO
+===================================================== */
+
+.klein-second-page {
+    margin-top: 35px;
+}
+
+
+.klein-page-two-sidebar {
+    min-height: 500px;
+
+    padding-top: 50px;
+}
+
+
+.klein-page-two-main {
+    min-height: 500px;
+
+    padding-top: 50px;
+}
+
+
+/* KLEIN BOTTOM BUTTON */
+
+.klein-bottom-navigation {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 20px auto 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+.klein-bottom-navigation a {
+    padding: 11px 18px;
+
+    background: #345875;
+
+    color: #ffffff;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+
+.klein-bottom-navigation a:hover {
+    background: #3475b6;
+}
+
+
+/* =====================================================
+   HOMEPAGE RESPONSIVE DESIGN
+===================================================== */
+
+@media screen and (max-width: 700px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+
+    .nav-links {
+        gap: 15px;
+    }
+
+
+    .hero {
+        min-height: 600px;
+    }
+
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .profiles {
+        padding: 70px 20px;
+    }
+
+
+    .profile-image {
+        height: 350px;
+    }
+
+
+    .cv-navbar {
+        padding: 15px;
+    }
+
+
+    .cv-name {
+        display: none;
+    }
+
+
+    .cv-viewer {
+        padding: 40px 10px 60px;
+    }
+
+
+    .cv-images {
+        gap: 15px;
+    }
+
+
+    .bottom-navigation {
+        padding: 0 5px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =====================================================
+   CLARENCE RESPONSIVE
+===================================================== */
+
+@media screen and (max-width: 850px) {
+
+    .cv-paper {
+        margin: 0;
+
+        grid-template-columns: 1fr;
+
+        box-shadow: none;
+    }
+
+
+    .cv-left {
+        padding: 40px 25px;
+    }
+
+
+    .cv-right {
+        padding: 40px 25px;
+    }
+
+
+    .cv-right .big-name {
+        font-size: 36px;
+    }
+}
+
+
+/* =====================================================
+   KLEIN TABLET
+===================================================== */
+
+@media screen and (max-width: 850px) {
+
+    body.klein-page {
+        padding: 20px 10px 40px;
+    }
+
+
+    .klein-cv {
+        margin-bottom: 25px;
+    }
+
+
+    .klein-top-bar {
+        height: 65px;
+    }
+
+
+    .klein-layout {
+        grid-template-columns:
+            32% 68%;
+    }
+
+
+    .klein-photo {
+        width: 140px;
+        height: 140px;
+    }
+
+
+    .klein-header h1 {
+        font-size: 29px;
+    }
+
+
+    .klein-header p {
+        font-size: 16px;
+    }
+
+
+    .klein-sidebar-name h2 {
+        font-size: 16px;
+    }
+
+
+    .klein-sidebar-name p {
+        font-size: 11px;
+    }
+
+
+    .klein-side-section h3 {
+        font-size: 15px;
+    }
+
+
+    .klein-side-section p,
+    .klein-side-section strong,
+    .klein-side-section li {
+        font-size: 11px;
+    }
+
+
+    .klein-section > h2 {
+        font-size: 17px;
+    }
+
+
+    .klein-section > h3 {
+        font-size: 13px;
+    }
+
+
+    .klein-section > p {
+        font-size: 11px;
+    }
+
+
+    .klein-project h3 {
+        font-size: 14px;
+    }
+
+
+    .klein-project strong {
+        font-size: 10px;
+    }
+
+
+    .klein-project em {
+        font-size: 10px;
+    }
+
+
+    .klein-project li {
+        font-size: 10px;
+    }
+}
+
+
+/* =====================================================
+   KLEIN PHONE
+   Keeps the original CV two-column appearance
+===================================================== */
+
+@media screen and (max-width: 550px) {
+
+    body.klein-page {
+        padding: 10px 5px 30px;
+    }
+
+
+    .klein-site-nav {
+        margin-bottom: 10px;
+    }
+
+
+    .klein-site-nav a {
+        padding: 8px 10px;
+
+        font-size: 10px;
+    }
+
+
+    .klein-cv {
+        width: 100%;
+
+        margin-bottom: 15px;
+
+        box-shadow:
+            0 8px 25px
+            rgba(0, 0, 0, 0.35);
+    }
+
+
+    .klein-top-bar {
+        height: 42px;
+    }
+
+
+    .klein-layout {
+        grid-template-columns:
+            31% 69%;
+    }
+
+
+    .klein-sidebar {
+        padding: 5px 5px 20px;
+    }
+
+
+    .klein-photo {
+        width: 85px;
+        height: 85px;
+
+        margin-bottom: 6px;
+    }
+
+
+    .klein-sidebar-name {
+        margin-bottom: 8px;
+    }
+
+
+    .klein-sidebar-name h2 {
+        font-size: 9px;
+
+        line-height: 1.1;
+    }
+
+
+    .klein-sidebar-name p {
+        font-size: 6px;
+    }
+
+
+    .klein-side-section {
+        margin-bottom: 7px;
+    }
+
+
+    .klein-side-section h3 {
+        margin-bottom: 2px;
+
+        font-size: 9px;
+    }
+
+
+    .klein-side-section p,
+    .klein-side-section strong,
+    .klein-side-section li {
+        font-size: 6px;
+
+        line-height: 1.25;
+    }
+
+
+    .klein-side-section ul {
+        padding-left: 10px;
+    }
+
+
+    .klein-main {
+        padding: 15px 6px 25px;
+    }
+
+
+    .klein-header {
+        margin-bottom: 12px;
+    }
+
+
+    .klein-header h1 {
+        font-size: 17px;
+
+        letter-spacing: 0;
+    }
+
+
+    .klein-header p {
+        margin-top: 4px;
+
+        font-size: 8px;
+
+        letter-spacing: 0.5px;
+    }
+
+
+    .klein-section {
+        margin-bottom: 6px;
+    }
+
+
+    .klein-section > h2 {
+        margin-bottom: 3px;
+
+        padding-bottom: 1px;
+
+        font-size: 10px;
+
+        border-bottom-width: 1px;
+    }
+
+
+    .klein-section > h3 {
+        font-size: 7px;
+    }
+
+
+    .klein-section > p {
+        font-size: 6px;
+
+        line-height: 1.25;
+    }
+
+
+    .klein-project {
+        margin-bottom: 5px;
+    }
+
+
+    .klein-project h3 {
+        font-size: 7.5px;
+    }
+
+
+    .klein-project strong {
+        font-size: 5.5px;
+    }
+
+
+    .klein-project em {
+        font-size: 5.5px;
+    }
+
+
+    .klein-project ul {
+        margin-top: 1px;
+
+        padding-left: 10px;
+    }
+
+
+    .klein-project li {
+        font-size: 5.5px;
+
+        line-height: 1.25;
+    }
+
+
+    .klein-page-two-sidebar,
+    .klein-page-two-main {
+        min-height: 300px;
+
+        padding-top: 25px;
+    }
+
+
+    .klein-bottom-navigation a {
+        padding: 8px 10px;
+
+        font-size: 9px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL PHONE
+===================================================== */
+
+@media screen and (max-width: 400px) {
+
+    .nav-links a:first-child {
+        display: none;
+    }
+
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+
+    .profile-image {
+        height: 300px;
+    }
+
+
+    .back-button,
+    .switch-button {
+        font-size: 12px;
+    }
+
+
+    .klein-photo {
+        width: 75px;
+        height: 75px;
+    }
+
+
+    .klein-header h1 {
+        font-size: 15px;
+    }
+}
+
+
+/* =====================================================
+   PRINT CV
+===================================================== */
+
+@media print {
+
+    body,
+    body.klein-page {
+        background: white;
+
+        padding: 0;
+    }
+
+
+    .navbar,
+    .cv-navbar,
+    .cv-topbar,
+    .klein-site-nav,
+    .klein-bottom-navigation,
+    footer {
+        display: none !important;
+    }
+
+
+    .klein-cv {
+        width: 100%;
+
+        max-width: none;
+
+        margin: 0;
+
+        box-shadow: none;
+
+        page-break-after: always;
+    }
+
+
+    .klein-cv:last-of-type {
+        page-break-after: auto;
+    }
+
+
+    .cv-paper {
+        margin: 0;
+
+        box-shadow: none;
+    }
+}    background: #111e31;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.35s;
+}
+
+.profile-card:hover {
+    transform: translateY(-8px);
+    border-color: #3b82f6;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.profile-image {
+    width: 100%;
+    height: 330px;
+    background: #18273b;
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+.profile-card:hover .profile-image img {
+    transform: scale(1.05);
+}
+
+.profile-info {
+    padding: 25px;
+}
+
+.student {
+    color: #60a5fa !important;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.profile-info h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.profile-info > p {
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+.view-cv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-weight: bold;
+}
+
+.view-cv span {
+    color: #60a5fa;
+    font-size: 22px;
+}
+
+footer {
+    padding: 30px;
+    text-align: center;
+    background: #050b14;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.cv-page {
+    background: #07111f;
+}
+
+.cv-navbar {
+    min-height: 75px;
+    padding: 15px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    background: rgba(7, 17, 31, 0.96);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 100;
+}
+
+.cv-name {
+    font-weight: bold;
+}
+
+.back-button,
+.switch-button {
+    color: #60a5fa;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cv-viewer {
+    padding: 55px 20px 80px;
+}
+
+.cv-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cv-heading > p {
+    color: #60a5fa;
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cv-heading h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 5px;
+}
+
+.cv-heading span {
+    color: #94a3b8;
+}
+
+.cv-images {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cv-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: white;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+}
+
+.bottom-navigation {
+    max-width: 1000px;
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.bottom-navigation a {
+    color: #60a5fa;
+    font-weight: bold;
+}
+
+body.clarence-page {
+    margin: 0;
+    padding: 40px 20px;
+    background: #111;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clarence-cv {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 1050px;
+    margin: 0 auto;
+    padding: 55px 60px;
+    background: #f5f5f5;
+    color: #222;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+
+.clarence-header {
+    text-align: center;
+    padding-bottom: 22px;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #333;
+}
+
+.clarence-header h1 {
+    margin: 0;
+    color: #222;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 9px;
+}
+
+.clarence-layout {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    gap: 55px;
+}
+
+.clarence-left,
+.clarence-right {
+    min-width: 0;
+}
+
+.clarence-section {
+    margin-bottom: 30px;
+}
+
+.clarence-section h2 {
+    margin: 0 0 10px;
+    color: #222;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.clarence-left .clarence-section h2 {
+    padding-bottom: 7px;
+    border-bottom: 1px solid #333;
+}
+
+.clarence-section h3 {
+    margin: 18px 0 4px;
+    color: #222;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.clarence-cv p {
+    margin: 2px 0;
+    color: #222;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.clarence-cv a {
+    color: #222;
+}
+
+.clarence-left a {
+    overflow-wrap: anywhere;
+}
+
+.clarence-education {
+    margin-bottom: 20px;
+}
+
+.clarence-education strong {
+    display: block;
+    color: #222;
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.clarence-about {
+    margin-bottom: 30px;
+}
+
+.clarence-project {
+    margin-bottom: 25px;
+}
+
+.clarence-project ul {
+    margin: 8px 0 0 35px;
+    padding-left: 15px;
+}
+
+.clarence-project li {
+    color: #222;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 3px;
+}
+
+.clarence-back {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 11px 18px;
+    background: #222;
+    color: #fff !important;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profiles {
+        padding: 70px 20px;
+    }
+
+    .profile-image {
+        height: 350px;
+    }
+
+    .cv-navbar {
+        padding: 15px;
+    }
+
+    .cv-name {
+        display: none;
+    }
+
+    .cv-viewer {
+        padding: 40px 10px 60px;
+    }
+
+    .cv-images {
+        gap: 15px;
+    }
+
+    .bottom-navigation {
+        padding: 0 5px;
+        font-size: 12px;
+    }
+
+    body.clarence-page {
+        padding: 15px;
+        background: #111;
+    }
+
+    .clarence-cv {
+        min-height: auto;
+        padding: 35px 25px;
+    }
+
+    .clarence-header {
+        margin-bottom: 30px;
+    }
+
+    .clarence-header h1 {
+        font-size: 26px;
+        letter-spacing: 4px;
+        line-height: 1.3;
+    }
+
+    .clarence-layout {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .clarence-about {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav-links a:first-child {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .profile-image {
+        height: 300px;
+    }
+
+    .back-button,
+    .switch-button {
+        font-size: 12px;
+    }
+
+    .clarence-cv {
+        padding: 28px 18px;
+    }
+
+    .clarence-header h1 {
+        font-size: 23px;
+        letter-spacing: 3px;
+    }
+}
+
+@media print {
+    body.clarence-page {
+        padding: 0;
+        background: white;
+    }
+
+    .clarence-cv {
+        max-width: none;
+        min-height: 0;
+        padding: 30px 40px;
+        box-shadow: none;
+    }
+
+    .clarence-back {
+        display: none;
+    }
+}    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: #2563eb;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.main-button:hover {
+    background: #3b82f6;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==============================
+   PROFILE SECTION
+============================== */
+
+.profiles {
+    padding: 90px 7%;
+
+    background: #0b1626;
+}
+
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+.section-heading > p {
+    color: #60a5fa;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+.section-heading h2 {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+
+.section-heading span {
+    color: #94a3b8;
+}
+
+
+/* ==============================
+   PROFILE CARDS
+============================== */
+
+.profile-grid {
+    max-width: 950px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+.profile-card {
+    background: #111e31;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: 0.35s;
+}
+
+
+.profile-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.4);
+}
+
+
+/* PROFILE IMAGE */
+
+.profile-image {
+    width: 100%;
+
+    height: 330px;
+
+    background: #18273b;
+
+    overflow: hidden;
+}
+
+
+.profile-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+
+.profile-card:hover
+.profile-image img {
+
+    transform: scale(1.05);
+}
+
+
+/* PROFILE INFO */
+
+.profile-info {
+    padding: 25px;
+}
+
+
+.student {
+    color: #60a5fa !important;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.profile-info h3 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+.profile-info > p {
+    color: #94a3b8;
+
+    line-height: 1.6;
+}
+
+
+.view-cv {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.08);
+
+    font-weight: bold;
+}
+
+
+.view-cv span {
+    color: #60a5fa;
+
+    font-size: 22px;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #050b14;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ==============================
+   CV PAGE
+============================== */
+
+.cv-page {
+    background: #07111f;
+}
+
+
+/* CV NAVBAR */
+
+.cv-navbar {
+    min-height: 75px;
+
+    padding: 15px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    position: sticky;
+
+    top: 0;
+
+    background:
+        rgba(7,17,31,0.96);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+
+    z-index: 100;
+}
+
+
+.cv-name {
+    font-weight: bold;
+}
+
+
+.back-button,
+.switch-button {
+    color: #60a5fa;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* CV VIEWER */
+
+.cv-viewer {
+    padding:
+        55px 20px
+        80px;
+}
+
+
+.cv-heading {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+.cv-heading > p {
+    color: #60a5fa;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+.cv-heading h1 {
+    font-size:
+        clamp(30px, 5vw, 48px);
+
+    margin-bottom: 5px;
+}
+
+
+.cv-heading span {
+    color: #94a3b8;
+}
+
+
+/* ==============================
+   ACTUAL CV IMAGES
+============================== */
+
+.cv-images {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+.cv-images img {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    background: white;
+
+    box-shadow:
+        0 15px 50px
+        rgba(0,0,0,0.5);
+}
+
+
+/* ==============================
+   BOTTOM NAVIGATION
+============================== */
+
+.bottom-navigation {
+    max-width: 1000px;
+
+    margin: 40px auto 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.bottom-navigation a {
+    color: #60a5fa;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   TABLET / PHONE
+============================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+
+    .nav-links {
+        gap: 15px;
+    }
+
+
+    .hero {
+        min-height: 600px;
+    }
+
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .profiles {
+        padding:
+            70px 20px;
+    }
+
+
+    .profile-image {
+        height: 350px;
+    }
+
+
+    .cv-navbar {
+        padding: 15px;
+    }
+
+
+    .cv-name {
+        display: none;
+    }
+
+
+    .cv-viewer {
+        padding:
+            40px 10px
+            60px;
+    }
+
+
+    .cv-images {
+        gap: 15px;
+    }
+
+
+    .bottom-navigation {
+        padding: 0 5px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* ==============================
+   SMALL PHONES
+============================== */
+
+@media (max-width: 400px) {
+
+    .nav-links a:first-child {
+        display: none;
+    }
+
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+
+    .profile-image {
+        height: 300px;
+    }
+
+
+    .back-button,
+    .switch-button {
+        font-size: 12px;
+    }
+
+}
 * {
     margin: 0;
     padding: 0;
@@ -148,4 +2766,1685 @@ body.clarence-page {
 
 .back-btn:hover {
     background: #444;
+}
+
+@media screen and (max-width: 850px) {
+    .cv {
+        padding: 45px 40px;
+    }
+
+    .cv-grid {
+        grid-template-columns: 32% 68%;
+        gap: 35px;
+    }
+
+    .cv-header h1 {
+        font-size: 32px;
+        letter-spacing: 7px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    body.clarence-page {
+        padding: 0;
+        background: #f7f7f7;
+    }
+
+    .cv {
+        width: 100%;
+        min-height: 100vh;
+        padding: 35px 25px;
+        box-shadow: none;
+    }
+
+    .cv-header {
+        margin-bottom: 30px;
+    }
+
+    .cv-header h1 {
+        font-size: 26px;
+        letter-spacing: 5px;
+        line-height: 1.3;
+    }
+
+    .cv-grid {
+        display: block;
+    }
+
+    .cv-left {
+        padding-right: 0;
+    }
+
+    .cv-right {
+        padding-left: 0;
+    }
+
+    .cv-left .cv-section {
+        margin-bottom: 30px;
+    }
+
+    .cv-profile {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .cv-left p,
+    .cv-right .cv-section p,
+    .cv-profile p,
+    .project li {
+        font-size: 14px;
+    }
+}
+
+@media print {
+    body.clarence-page {
+        background: white;
+        padding: 0;
+    }
+
+    .cv {
+        width: 100%;
+        max-width: none;
+        min-height: 0;
+        padding: 30px 40px;
+        box-shadow: none;
+    }
+
+    .back-btn {
+        display: none;
+    }
+}
+
+/* ==========================================================
+   KLEIN CV — FINAL DESIGN OVERRIDES
+   ONLY affects <body class="klein-page">
+========================================================== */
+
+body.klein-page {
+    margin: 0;
+    padding: 40px 20px 60px;
+    background: #0b1118;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==========================================================
+   WEBSITE NAVIGATION
+========================================================== */
+
+body.klein-page .klein-site-nav {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+
+body.klein-page .klein-site-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 18px;
+
+    background: #345875;
+    color: #ffffff;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+body.klein-page .klein-site-nav a:hover {
+    background: #3475b6;
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   CV PAPER
+========================================================== */
+
+body.klein-page .klein-cv {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto 35px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==========================================================
+   BLUE HEADER
+========================================================== */
+
+body.klein-page .klein-top-bar {
+    width: 100%;
+    height: 82px;
+
+    display: grid;
+
+    grid-template-columns:
+        28% 13% 59%;
+}
+
+
+body.klein-page .klein-blue-dark {
+    background: #345875;
+}
+
+
+body.klein-page .klein-blue-medium {
+    background: #3475b6;
+}
+
+
+body.klein-page .klein-blue-light {
+    background: #6599ce;
+}
+
+
+/* ==========================================================
+   MAIN TWO COLUMN LAYOUT
+========================================================== */
+
+body.klein-page .klein-layout {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        31% 69%;
+
+    align-items: stretch;
+}
+
+
+/* ==========================================================
+   LEFT SIDEBAR
+========================================================== */
+
+body.klein-page .klein-sidebar {
+    background: #eeeeee;
+
+    padding: 12px 20px 45px;
+
+    color: #111;
+
+    min-width: 0;
+}
+
+
+/* ==========================================================
+   PROFILE PHOTO
+========================================================== */
+
+body.klein-page .klein-photo {
+    width: 175px;
+    height: 175px;
+
+    margin: 0 auto 16px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+body.klein-page .klein-photo img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+}
+
+
+/* ==========================================================
+   SIDEBAR NAME
+========================================================== */
+
+body.klein-page .klein-sidebar-name {
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+body.klein-page .klein-sidebar-name h2 {
+    margin: 0 0 6px;
+
+    color: #111;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    line-height: 1.15;
+}
+
+
+body.klein-page .klein-sidebar-name p {
+    margin: 0;
+
+    color: #222;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+/* ==========================================================
+   SIDEBAR SECTIONS
+========================================================== */
+
+body.klein-page .klein-side-section {
+    margin-bottom: 19px;
+}
+
+
+body.klein-page .klein-side-section h3 {
+    margin: 0 0 7px;
+
+    padding-bottom: 4px;
+
+    color: #345875;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    border-bottom:
+        1px solid rgba(52, 88, 117, 0.35);
+}
+
+
+body.klein-page .klein-side-section p {
+    margin: 2px 0;
+
+    color: #222;
+
+    font-size: 13px;
+
+    line-height: 1.35;
+
+    overflow-wrap: anywhere;
+}
+
+
+body.klein-page .klein-side-section strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #111;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+body.klein-page .klein-side-section ul {
+    margin: 5px 0 0;
+
+    padding-left: 18px;
+}
+
+
+body.klein-page .klein-side-section li {
+    margin-bottom: 2px;
+
+    color: #222;
+
+    font-size: 13px;
+
+    line-height: 1.35;
+}
+
+
+/* ==========================================================
+   RIGHT SIDE
+========================================================== */
+
+body.klein-page .klein-main {
+    min-width: 0;
+
+    padding: 32px 30px 45px;
+
+    background: #ffffff;
+
+    color: #222;
+}
+
+
+/* ==========================================================
+   MAIN NAME HEADER
+========================================================== */
+
+body.klein-page .klein-header {
+    margin-bottom: 28px;
+}
+
+
+body.klein-page .klein-header h1 {
+    margin: 0;
+
+    color: #333333;
+
+    font-size: 37px;
+    font-weight: 600;
+
+    line-height: 1.05;
+
+    letter-spacing: 0.5px;
+}
+
+
+body.klein-page .klein-header h1 span {
+    color: #345875;
+}
+
+
+body.klein-page .klein-header p {
+    margin: 8px 0 0;
+
+    color: #444444;
+
+    font-size: 18px;
+
+    line-height: 1.2;
+
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================================
+   MAIN SECTIONS
+========================================================== */
+
+body.klein-page .klein-section {
+    margin-bottom: 18px;
+}
+
+
+body.klein-page .klein-section > h2 {
+    margin: 0 0 8px;
+
+    padding-bottom: 4px;
+
+    color: #345875;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    border-bottom:
+        2px solid #345875;
+}
+
+
+body.klein-page .klein-section > h3 {
+    margin: 0 0 2px;
+
+    color: #111;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+body.klein-page .klein-section > p {
+    margin: 3px 0;
+
+    color: #222;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================================
+   PROJECTS
+========================================================== */
+
+body.klein-page .klein-project {
+    margin-bottom: 15px;
+}
+
+
+body.klein-page .klein-project:last-child {
+    margin-bottom: 0;
+}
+
+
+body.klein-page .klein-project h3 {
+    margin: 0 0 2px;
+
+    color: #111;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+body.klein-page .klein-project strong {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #555;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+
+body.klein-page .klein-project em {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.3;
+}
+
+
+body.klein-page .klein-project ul {
+    margin: 5px 0 0;
+
+    padding-left: 22px;
+}
+
+
+body.klein-page .klein-project li {
+    padding-left: 2px;
+
+    color: #333;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================================
+   PAGE TWO
+========================================================== */
+
+body.klein-page .klein-second-page {
+    margin-top: 35px;
+}
+
+
+body.klein-page .klein-page-two-sidebar {
+    min-height: 500px;
+
+    padding-top: 45px;
+}
+
+
+body.klein-page .klein-page-two-main {
+    min-height: 500px;
+
+    padding-top: 45px;
+}
+
+
+/* ==========================================================
+   BOTTOM NAVIGATION
+========================================================== */
+
+body.klein-page .klein-bottom-navigation {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 10px auto 0;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+body.klein-page .klein-bottom-navigation a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 18px;
+
+    background: #345875;
+
+    color: #ffffff;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+body.klein-page .klein-bottom-navigation a:hover {
+    background: #3475b6;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media screen and (max-width: 850px) {
+
+    body.klein-page {
+        padding: 20px 10px 40px;
+    }
+
+
+    body.klein-page .klein-top-bar {
+        height: 65px;
+    }
+
+
+    body.klein-page .klein-layout {
+        grid-template-columns:
+            32% 68%;
+    }
+
+
+    body.klein-page .klein-sidebar {
+        padding:
+            10px 12px 30px;
+    }
+
+
+    body.klein-page .klein-main {
+        padding:
+            25px 20px 35px;
+    }
+
+
+    body.klein-page .klein-photo {
+        width: 135px;
+        height: 135px;
+    }
+
+
+    body.klein-page .klein-header h1 {
+        font-size: 29px;
+    }
+
+
+    body.klein-page .klein-header p {
+        font-size: 15px;
+    }
+
+
+    body.klein-page .klein-sidebar-name h2 {
+        font-size: 16px;
+    }
+
+
+    body.klein-page .klein-sidebar-name p {
+        font-size: 11px;
+    }
+
+
+    body.klein-page .klein-side-section h3 {
+        font-size: 15px;
+    }
+
+
+    body.klein-page .klein-side-section p,
+    body.klein-page .klein-side-section strong,
+    body.klein-page .klein-side-section li {
+        font-size: 11px;
+    }
+
+
+    body.klein-page .klein-section > h2 {
+        font-size: 17px;
+    }
+
+
+    body.klein-page .klein-section > h3 {
+        font-size: 13px;
+    }
+
+
+    body.klein-page .klein-section > p {
+        font-size: 11px;
+    }
+
+
+    body.klein-page .klein-project h3 {
+        font-size: 14px;
+    }
+
+
+    body.klein-page .klein-project strong,
+    body.klein-page .klein-project em,
+    body.klein-page .klein-project li {
+        font-size: 10px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+   Keep CV looking like the original 2-column document
+========================================================== */
+
+@media screen and (max-width: 550px) {
+
+    body.klein-page {
+        padding: 12px 5px 30px;
+
+        overflow-x: hidden;
+    }
+
+
+    body.klein-page .klein-site-nav {
+        margin-bottom: 10px;
+    }
+
+
+    body.klein-page .klein-site-nav a {
+        padding: 8px 10px;
+
+        font-size: 10px;
+    }
+
+
+    body.klein-page .klein-cv {
+        margin-bottom: 18px;
+
+        box-shadow:
+            0 8px 25px
+            rgba(0, 0, 0, 0.35);
+    }
+
+
+    body.klein-page .klein-top-bar {
+        height: 42px;
+    }
+
+
+    body.klein-page .klein-layout {
+        /*
+           IMPORTANT:
+           Do NOT turn this into one column.
+           This preserves Klein's actual CV appearance.
+        */
+
+        grid-template-columns:
+            31% 69%;
+    }
+
+
+    body.klein-page .klein-sidebar {
+        padding:
+            6px 6px 20px;
+    }
+
+
+    body.klein-page .klein-photo {
+        width: 82px;
+        height: 82px;
+
+        margin-bottom: 7px;
+    }
+
+
+    body.klein-page .klein-sidebar-name {
+        margin-bottom: 9px;
+    }
+
+
+    body.klein-page .klein-sidebar-name h2 {
+        margin-bottom: 3px;
+
+        font-size: 9px;
+    }
+
+
+    body.klein-page .klein-sidebar-name p {
+        font-size: 6px;
+    }
+
+
+    body.klein-page .klein-side-section {
+        margin-bottom: 8px;
+    }
+
+
+    body.klein-page .klein-side-section h3 {
+        margin-bottom: 3px;
+
+        padding-bottom: 2px;
+
+        font-size: 9px;
+    }
+
+
+    body.klein-page .klein-side-section p,
+    body.klein-page .klein-side-section strong,
+    body.klein-page .klein-side-section li {
+        font-size: 6px;
+
+        line-height: 1.3;
+    }
+
+
+    body.klein-page .klein-side-section ul {
+        margin-top: 2px;
+
+        padding-left: 10px;
+    }
+
+
+    body.klein-page .klein-main {
+        padding:
+            15px 8px 25px;
+    }
+
+
+    body.klein-page .klein-header {
+        margin-bottom: 13px;
+    }
+
+
+    body.klein-page .klein-header h1 {
+        font-size: 17px;
+
+        letter-spacing: 0;
+    }
+
+
+    body.klein-page .klein-header p {
+        margin-top: 4px;
+
+/* ==========================================================
+   KLEIN CV - FINAL
+   ONLY AFFECTS klein.html
+========================================================== */
+
+body.klein-page {
+    margin: 0;
+    padding: 32px 18px 55px;
+    background: #0b1118;
+    color: #1f2933;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ---------- TOP CONTROLS ---------- */
+
+body.klein-page .klein-controls {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+body.klein-page .klein-controls a,
+body.klein-page .klein-controls button {
+    border: 0;
+    outline: 0;
+
+    padding: 11px 17px;
+
+    background: #345875;
+    color: #fff;
+
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+body.klein-page .klein-controls a:hover,
+body.klein-page .klein-controls button:hover {
+    background: #3475b6;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- CV PAPER ---------- */
+
+body.klein-page .klein-cv-page {
+    width: 100%;
+    max-width: 1050px;
+    min-height: 1120px;
+
+    margin: 0 auto 35px;
+
+    background: #fff;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 18px 55px rgba(0, 0, 0, 0.38);
+}
+
+
+/* ---------- TOP COLOR BAR ---------- */
+
+body.klein-page .klein-color-bar {
+    width: 100%;
+    height: 78px;
+
+    display: grid;
+    grid-template-columns: 31% 14% 55%;
+}
+
+body.klein-page .bar-dark {
+    background: #345875;
+}
+
+body.klein-page .bar-medium {
+    background: #3475b6;
+}
+
+body.klein-page .bar-light {
+    background: #6599ce;
+}
+
+
+/* ---------- MAIN GRID ---------- */
+
+body.klein-page .klein-cv-grid {
+    display: grid;
+    grid-template-columns: 31% 69%;
+
+    min-height: 1042px;
+}
+
+
+/* ==========================================================
+   SIDEBAR
+========================================================== */
+
+body.klein-page .klein-sidebar {
+    min-width: 0;
+
+    padding: 45px 28px;
+
+    background: #edf0f2;
+    color: #20252a;
+}
+
+
+/* ---------- SIDEBAR INTRO ---------- */
+
+body.klein-page .klein-sidebar-intro {
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+
+    border-bottom: 2px solid #345875;
+}
+
+body.klein-page .klein-sidebar-intro h2 {
+    margin: 0 0 8px;
+
+    color: #263746;
+
+    font-size: 23px;
+    line-height: 1.08;
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
+}
+
+body.klein-page .klein-sidebar-intro p {
+    margin: 0;
+
+    color: #52606c;
+
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+
+/* ---------- SIDEBAR SECTIONS ---------- */
+
+body.klein-page .klein-side-section {
+    margin: 0 0 30px;
+}
+
+body.klein-page .klein-side-section h3 {
+    margin: 0 0 13px;
+    padding-bottom: 7px;
+
+    color: #345875;
+
+    font-size: 15px;
+    line-height: 1.25;
+    font-weight: 800;
+
+    letter-spacing: 0.6px;
+
+    border-bottom: 1px solid #aeb9c2;
+}
+
+body.klein-page .klein-side-section p {
+    margin: 0 0 8px;
+
+    color: #30373d;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+body.klein-page .klein-side-section strong {
+    display: block;
+
+    color: #20252a;
+
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+body.klein-page .klein-side-section ul {
+    margin: 0;
+    padding-left: 17px;
+}
+
+body.klein-page .klein-side-section li {
+    margin-bottom: 6px;
+
+    color: #30373d;
+
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+
+/* ---------- SIDEBAR EDUCATION ---------- */
+
+body.klein-page .klein-side-entry span {
+    display: block;
+
+    margin: 4px 0 7px;
+
+    color: #65727d;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   MAIN CONTENT
+========================================================== */
+
+body.klein-page .klein-main {
+    min-width: 0;
+
+    padding: 48px 45px 50px;
+
+    background: #fff;
+    color: #222a30;
+}
+
+
+/* ---------- HEADER ---------- */
+
+body.klein-page .klein-header {
+    margin-bottom: 37px;
+}
+
+body.klein-page .klein-eyebrow {
+    margin: 0 0 8px;
+
+    color: #6599ce;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+body.klein-page .klein-header h1 {
+    margin: 0;
+
+    color: #30373d;
+
+    font-size: 42px;
+    line-height: 1.02;
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+}
+
+body.klein-page .klein-header h1 span {
+    color: #345875;
+}
+
+body.klein-page .klein-title {
+    margin: 10px 0 0;
+
+    color: #65727d;
+
+    font-size: 15px;
+    line-height: 1.3;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+/* ---------- CONTENT SECTIONS ---------- */
+
+body.klein-page .klein-section {
+    margin: 0 0 28px;
+}
+
+body.klein-page .klein-section > h2 {
+    margin: 0 0 14px;
+    padding-bottom: 7px;
+
+    color: #345875;
+
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 800;
+
+    letter-spacing: 0.7px;
+
+    border-bottom: 2px solid #345875;
+}
+
+body.klein-page .klein-section > p {
+    margin: 0;
+
+    color: #3d464d;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ---------- EDUCATION ---------- */
+
+body.klein-page .klein-education-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 25px;
+}
+
+body.klein-page .klein-education-entry h3 {
+    margin: 0 0 5px;
+
+    color: #222a30;
+
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+body.klein-page .klein-education-entry p {
+    margin: 0;
+
+    color: #56616a;
+
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+body.klein-page .klein-education-entry > span {
+    flex-shrink: 0;
+
+    color: #345875;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* ==========================================================
+   PROJECTS
+========================================================== */
+
+body.klein-page .klein-project {
+    position: relative;
+
+    margin-bottom: 20px;
+    padding: 0 0 20px 16px;
+
+    border-bottom: 1px solid #dfe4e8;
+}
+
+body.klein-page .klein-project::before {
+    content: "";
+
+    position: absolute;
+
+    top: 3px;
+    left: 0;
+
+    width: 4px;
+    height: 27px;
+
+    background: #6599ce;
+
+    border-radius: 5px;
+}
+
+body.klein-page .klein-project:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    border-bottom: 0;
+}
+
+body.klein-page .klein-project h3 {
+    margin: 0 0 5px;
+
+    color: #222a30;
+
+    font-size: 15px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+body.klein-page .klein-project-meta {
+    margin-bottom: 8px;
+}
+
+body.klein-page .klein-project-meta strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #345875;
+
+    font-size: 10px;
+    line-height: 1.3;
+
+    letter-spacing: 0.4px;
+}
+
+body.klein-page .klein-project-meta span {
+    display: block;
+
+    color: #74808a;
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    font-style: italic;
+}
+
+body.klein-page .klein-project > p {
+    margin: 0;
+
+    color: #414a51;
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+
+/* ==========================================================
+   PAGE TWO
+========================================================== */
+
+body.klein-page .klein-page-two-label {
+    margin-bottom: 38px;
+    padding-bottom: 12px;
+
+    color: #345875;
+
+    font-size: 12px;
+    line-height: 1.3;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    border-bottom: 2px solid #345875;
+}
+
+body.klein-page .klein-page-two-main {
+    padding-top: 48px;
+}
+
+body.klein-page .klein-page-two-header {
+    margin-bottom: 38px;
+}
+
+body.klein-page .klein-page-two-header > p {
+    margin: 0 0 8px;
+
+    color: #6599ce;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+body.klein-page .klein-page-two-header h1 {
+    margin: 0;
+
+    color: #30373d;
+
+    font-size: 31px;
+    line-height: 1.1;
+}
+
+body.klein-page .klein-page-two-header h1 span {
+    color: #345875;
+}
+
+body.klein-page .klein-project-large {
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+}
+
+body.klein-page .klein-project-large h3 {
+    font-size: 19px;
+}
+
+body.klein-page .klein-project-large > p {
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+
+/* ==========================================================
+   BOTTOM NAVIGATION
+========================================================== */
+
+body.klein-page .klein-bottom {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 5px auto 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+}
+
+body.klein-page .klein-bottom a {
+    padding: 11px 17px;
+
+    background: #345875;
+    color: #fff;
+
+    border-radius: 6px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+body.klein-page .klein-bottom a:hover {
+    background: #3475b6;
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media screen and (max-width: 850px) {
+
+    body.klein-page {
+        padding: 20px 10px 40px;
+    }
+
+    body.klein-page .klein-cv-page {
+        min-height: auto;
+    }
+
+    body.klein-page .klein-color-bar {
+        height: 60px;
+    }
+
+    body.klein-page .klein-cv-grid {
+        min-height: 0;
+        grid-template-columns: 32% 68%;
+    }
+
+    body.klein-page .klein-sidebar {
+        padding: 32px 18px;
+    }
+
+    body.klein-page .klein-main {
+        padding: 36px 27px 40px;
+    }
+
+    body.klein-page .klein-header h1 {
+        font-size: 32px;
+    }
+
+    body.klein-page .klein-title {
+        font-size: 12px;
+    }
+
+    body.klein-page .klein-sidebar-intro h2 {
+        font-size: 18px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media screen and (max-width: 600px) {
+
+    body.klein-page {
+        padding: 10px 6px 30px;
+    }
+
+    body.klein-page .klein-controls {
+        margin-bottom: 10px;
+    }
+
+    body.klein-page .klein-controls a,
+    body.klein-page .klein-controls button {
+        padding: 8px 10px;
+        font-size: 10px;
+    }
+
+    body.klein-page .klein-cv-page {
+        margin-bottom: 18px;
+
+        box-shadow:
+            0 8px 25px rgba(0, 0, 0, 0.32);
+    }
+
+    body.klein-page .klein-color-bar {
+        height: 38px;
+    }
+
+    /*
+       Keep the CV in two columns on phones
+       so it still looks like an actual CV.
+    */
+
+    body.klein-page .klein-cv-grid {
+        grid-template-columns: 31% 69%;
+    }
+
+    body.klein-page .klein-sidebar {
+        padding: 18px 8px;
+    }
+
+    body.klein-page .klein-main {
+        padding: 20px 12px 25px;
+    }
+
+    body.klein-page .klein-sidebar-intro {
+        margin-bottom: 14px;
+        padding-bottom: 10px;
+    }
+
+    body.klein-page .klein-sidebar-intro h2 {
+        margin-bottom: 4px;
+        font-size: 10px;
+    }
+
+    body.klein-page .klein-sidebar-intro p {
+        font-size: 6px;
+    }
+
+    body.klein-page .klein-side-section {
+        margin-bottom: 14px;
+    }
+
+    body.klein-page .klein-side-section h3 {
+        margin-bottom: 6px;
+        padding-bottom: 3px;
+
+        font-size: 8px;
+    }
+
+    body.klein-page .klein-side-section p,
+    body.klein-page .klein-side-section strong,
+    body.klein-page .klein-side-section li {
+        font-size: 6px;
+        line-height: 1.4;
+    }
+
+    body.klein-page .klein-side-section li {
+        margin-bottom: 3px;
+    }
+
+    body.klein-page .klein-side-section ul {
+        padding-left: 10px;
+    }
+
+    body.klein-page .klein-side-entry span {
+        font-size: 5.5px;
+    }
+
+    body.klein-page .klein-eyebrow {
+        margin-bottom: 4px;
+        font-size: 5.5px;
+        letter-spacing: 1.5px;
+    }
+
+    body.klein-page .klein-header {
+        margin-bottom: 18px;
+    }
+
+    body.klein-page .klein-header h1 {
+        font-size: 19px;
+    }
+
+    body.klein-page .klein-title {
+        margin-top: 5px;
+
+        font-size: 7px;
+        letter-spacing: 0.7px;
+    }
+
+    body.klein-page .klein-section {
+        margin-bottom: 14px;
+    }
+
+    body.klein-page .klein-section > h2 {
+        margin-bottom: 7px;
+        padding-bottom: 3px;
+
+        font-size: 9px;
+
+        border-bottom-width: 1px;
+    }
+
+    body.klein-page .klein-section > p {
+        font-size: 6.5px;
+        line-height: 1.45;
+    }
+
+    body.klein-page .klein-education-entry {
+        gap: 8px;
+    }
+
+    body.klein-page .klein-education-entry h3 {
+        font-size: 7px;
+    }
+
+    body.klein-page .klein-education-entry p,
+    body.klein-page .klein-education-entry > span {
+        font-size: 6px;
+    }
+
+    body.klein-page .klein-project {
+        margin-bottom: 9px;
+        padding: 0 0 9px 8px;
+    }
+
+    body.klein-page .klein-project::before {
+        width: 2px;
+        height: 15px;
+    }
+
+    body.klein-page .klein-project h3 {
+        margin-bottom: 3px;
+        font-size: 7.5px;
+    }
+
+    body.klein-page .klein-project-meta {
+        margin-bottom: 4px;
+    }
+
+    body.klein-page .klein-project-meta strong {
+        margin-bottom: 1px;
+        font-size: 5.5px;
+    }
+
+    body.klein-page .klein-project-meta span {
+        font-size: 5.5px;
+    }
+
+    body.klein-page .klein-project > p {
+        font-size: 6px;
+        line-height: 1.45;
+    }
+
+    body.klein-page .klein-page-two-label {
+        margin-bottom: 20px;
+
+        font-size: 6px;
+    }
+
+    body.klein-page .klein-page-two-header {
+        margin-bottom: 20px;
+    }
+
+    body.klein-page .klein-page-two-header > p {
+        font-size: 5.5px;
+    }
+
+    body.klein-page .klein-page-two-header h1 {
+        font-size: 15px;
+    }
+
+    body.klein-page .klein-project-large h3 {
+        font-size: 9px;
+    }
+
+    body.klein-page .klein-project-large > p {
+        font-size: 6.5px;
+    }
+
+    body.klein-page .klein-bottom a {
+        padding: 8px 10px;
+        font-size: 9px;
+    }
+}
+
+
+/* ==========================================================
+   PRINT / SAVE PDF
+========================================================== */
+
+@media print {
+
+    body.klein-page {
+        padding: 0;
+        background: #fff;
+    }
+
+    body.klein-page .klein-controls,
+    body.klein-page .klein-bottom {
+        display: none !important;
+    }
+
+    body.klein-page .klein-cv-page {
+        width: 100%;
+        max-width: none;
+        min-height: 100vh;
+
+        margin: 0;
+
+        box-shadow: none;
+
+        page-break-after: always;
+        break-after: page;
+    }
+
+    body.klein-page .klein-cv-page:last-of-type {
+        page-break-after: auto;
+        break-after: auto;
+    }
 }
