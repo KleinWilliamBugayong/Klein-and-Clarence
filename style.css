@@ -1,26 +1,644 @@
-body{
-    margin:0;
-    background:#e5e5e5;
-    font-family:Arial, sans-serif;
+/* ==============================
+   GENERAL
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.back{
-    display:inline-block;
-    margin:15px;
-    text-decoration:none;
-    color:#0b5ed7;
-    font-weight:bold;
+html {
+    scroll-behavior: smooth;
 }
 
-.cv-page{
-    max-width:900px;
-    margin:auto;
-    padding:10px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #07111f;
+    color: white;
 }
 
-.full-cv{
-    width:100%;
-    display:block;
-    border-radius:8px;
-    box-shadow:0 0 10px rgba(0,0,0,.2);
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ==============================
+   NAVBAR
+============================== */
+
+.navbar {
+    height: 75px;
+
+    padding: 0 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    background: rgba(7, 17, 31, 0.95);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+
+    z-index: 100;
+}
+
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+
+.logo span {
+    color: #60a5fa;
+}
+
+
+.nav-links {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.nav-links a {
+    color: #aab7c9;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: white;
+}
+
+
+/* ==============================
+   HERO
+============================== */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 120px 20px 80px;
+
+    background:
+
+        radial-gradient(
+            circle at top,
+            #18385f,
+            #07111f 60%
+        );
+}
+
+
+.hero-content {
+    max-width: 800px;
+}
+
+
+.label {
+    color: #60a5fa;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 85px);
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 span {
+    color: #60a5fa;
+}
+
+
+.hero h2 {
+    font-size: 22px;
+
+    color: #cbd5e1;
+
+    font-weight: normal;
+}
+
+
+.hero-description {
+    color: #94a3b8;
+
+    max-width: 550px;
+
+    margin:
+        25px auto
+        35px;
+
+    line-height: 1.7;
+}
+
+
+.main-button {
+    display: inline-block;
+
+    padding: 15px 25px;
+
+    background: #2563eb;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.main-button:hover {
+    background: #3b82f6;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==============================
+   PROFILE SECTION
+============================== */
+
+.profiles {
+    padding: 90px 7%;
+
+    background: #0b1626;
+}
+
+
+.section-heading {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+.section-heading > p {
+    color: #60a5fa;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+.section-heading h2 {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+
+.section-heading span {
+    color: #94a3b8;
+}
+
+
+/* ==============================
+   PROFILE CARDS
+============================== */
+
+.profile-grid {
+    max-width: 950px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+.profile-card {
+    background: #111e31;
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: 0.35s;
+}
+
+
+.profile-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.4);
+}
+
+
+/* PROFILE IMAGE */
+
+.profile-image {
+    width: 100%;
+
+    height: 330px;
+
+    background: #18273b;
+
+    overflow: hidden;
+}
+
+
+.profile-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.4s;
+}
+
+
+.profile-card:hover
+.profile-image img {
+
+    transform: scale(1.05);
+}
+
+
+/* PROFILE INFO */
+
+.profile-info {
+    padding: 25px;
+}
+
+
+.student {
+    color: #60a5fa !important;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.profile-info h3 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+.profile-info > p {
+    color: #94a3b8;
+
+    line-height: 1.6;
+}
+
+
+.view-cv {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 25px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.08);
+
+    font-weight: bold;
+}
+
+
+.view-cv span {
+    color: #60a5fa;
+
+    font-size: 22px;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background: #050b14;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ==============================
+   CV PAGE
+============================== */
+
+.cv-page {
+    background: #07111f;
+}
+
+
+/* CV NAVBAR */
+
+.cv-navbar {
+    min-height: 75px;
+
+    padding: 15px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    position: sticky;
+
+    top: 0;
+
+    background:
+        rgba(7,17,31,0.96);
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+
+    z-index: 100;
+}
+
+
+.cv-name {
+    font-weight: bold;
+}
+
+
+.back-button,
+.switch-button {
+    color: #60a5fa;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+
+/* CV VIEWER */
+
+.cv-viewer {
+    padding:
+        55px 20px
+        80px;
+}
+
+
+.cv-heading {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+.cv-heading > p {
+    color: #60a5fa;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+.cv-heading h1 {
+    font-size:
+        clamp(30px, 5vw, 48px);
+
+    margin-bottom: 5px;
+}
+
+
+.cv-heading span {
+    color: #94a3b8;
+}
+
+
+/* ==============================
+   ACTUAL CV IMAGES
+============================== */
+
+.cv-images {
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+
+.cv-images img {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    background: white;
+
+    box-shadow:
+        0 15px 50px
+        rgba(0,0,0,0.5);
+}
+
+
+/* ==============================
+   BOTTOM NAVIGATION
+============================== */
+
+.bottom-navigation {
+    max-width: 1000px;
+
+    margin: 40px auto 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.bottom-navigation a {
+    color: #60a5fa;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   TABLET / PHONE
+============================== */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+
+    .nav-links {
+        gap: 15px;
+    }
+
+
+    .hero {
+        min-height: 600px;
+    }
+
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .profiles {
+        padding:
+            70px 20px;
+    }
+
+
+    .profile-image {
+        height: 350px;
+    }
+
+
+    .cv-navbar {
+        padding: 15px;
+    }
+
+
+    .cv-name {
+        display: none;
+    }
+
+
+    .cv-viewer {
+        padding:
+            40px 10px
+            60px;
+    }
+
+
+    .cv-images {
+        gap: 15px;
+    }
+
+
+    .bottom-navigation {
+        padding: 0 5px;
+
+        font-size: 12px;
+    }
+
+}
+
+
+/* ==============================
+   SMALL PHONES
+============================== */
+
+@media (max-width: 400px) {
+
+    .nav-links a:first-child {
+        display: none;
+    }
+
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+
+    .profile-image {
+        height: 300px;
+    }
+
+
+    .back-button,
+    .switch-button {
+        font-size: 12px;
+    }
+
 }
