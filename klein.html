@@ -1,102 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Klein William Bugayong CV</title>
 
-<style>
-body{
-    margin:0;
-    background:#d9d9d9;
-    font-family:Arial,sans-serif;
-}
+    <meta charset="UTF-8">
 
-.back{
-    display:inline-block;
-    margin:15px;
-    text-decoration:none;
-    color:#0b5ed7;
-    font-weight:bold;
-}
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-.cv{
-    position:relative;
-    max-width:900px;
-    margin:auto;
-}
+    <title>Klein William Bugayong | CV</title>
 
-.cv img.template{
-    width:100%;
-    display:block;
-}
+    <link rel="stylesheet" href="style.css">
 
-.profile{
-    position:absolute;
-    top:75px;
-    left:53px;
-    width:145px;
-    height:145px;
-    border-radius:50%;
-    object-fit:cover;
-    border:4px solid white;
-    background:white;
-}
-
-.upload{
-    position:absolute;
-    top:230px;
-    left:35px;
-    width:180px;
-    opacity:0;
-    cursor:pointer;
-}
-
-.upload-label{
-    position:absolute;
-    top:230px;
-    left:35px;
-    width:180px;
-    text-align:center;
-    background:#1d4ed8;
-    color:white;
-    padding:8px;
-    border-radius:8px;
-    font-size:14px;
-    cursor:pointer;
-}
-</style>
 </head>
 
-<body>
+<body class="cv-page">
 
-<a href="index.html" class="back">← Back to Home</a>
 
-<div class="cv">
+    <nav class="cv-navbar">
 
-<img src="cv-template.jpg" class="template">
+        <a href="index.html" class="back-button">
+            ← Back
+        </a>
 
-<img src="default-photo.jpg" id="photo" class="profile">
+        <div class="cv-name">
+            Klein William Bugayong
+        </div>
 
-<label class="upload-label" for="uploadPhoto">
-Change Photo
-</label>
+        <a href="clarence.html" class="switch-button">
+            Clarence's CV →
+        </a>
 
-<input type="file" id="uploadPhoto" class="upload" accept="image/*">
+    </nav>
 
-</div>
 
-<script>
-const input=document.getElementById("uploadPhoto");
-const photo=document.getElementById("photo");
+    <main class="cv-viewer">
 
-input.onchange=function(){
-    const file=this.files[0];
-    if(file){
-        photo.src=URL.createObjectURL(file);
-    }
-}
-</script>
+
+        <div class="cv-heading">
+
+            <p>CURRICULUM VITAE</p>
+
+            <h1>
+                Klein William Bugayong
+            </h1>
+
+            <span>
+                Information Technology Student
+            </span>
+
+        </div>
+
+
+        <div class="cv-images">
+
+
+            <!-- KLEIN CV PAGE 1 -->
+
+            <img
+                src="images/klein-cv-1.png"
+                alt="Klein CV Page 1">
+
+
+            <!-- KLEIN CV PAGE 2 -->
+
+            <img
+                src="images/klein-cv-2.png"
+                alt="Klein CV Page 2">
+
+
+        </div>
+
+
+        <div class="bottom-navigation">
+
+            <a href="index.html">
+                ← Back to Profiles
+            </a>
+
+            <a href="clarence.html">
+                View Clarence's CV →
+            </a>
+
+        </div>
+
+
+    </main>
+
 
 </body>
 </html>
