@@ -3,80 +3,45 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Klein William Bugayong | CV</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body class="klein-page">
 
-    <!-- WEBSITE CONTROLS -->
-
+    <!-- TOP CONTROLS -->
     <div class="klein-controls">
+        <a href="index.html">← Back to Profiles</a>
 
-        <a href="index.html">
-            ← Back to Profiles
-        </a>
-
-        <button onclick="window.print()">
+        <button type="button" onclick="window.print()">
             Print / Save PDF
         </button>
-
     </div>
 
 
     <!-- ==================================================
-         CV PAGE 1
+         PAGE 1
     =================================================== -->
 
-    <div class="klein-cv-page">
+    <article class="klein-cv-page">
 
-
-        <!-- BLUE HEADER -->
-
+        <!-- BLUE DECORATIVE BAR -->
         <div class="klein-color-bar">
-
             <div class="bar-dark"></div>
-
             <div class="bar-medium"></div>
-
             <div class="bar-light"></div>
-
         </div>
 
 
-        <!-- CV CONTENT -->
-
         <div class="klein-cv-grid">
 
-
-            <!-- ==========================================
-                 LEFT SIDEBAR
-            =========================================== -->
-
+            <!-- LEFT SIDEBAR -->
             <aside class="klein-sidebar">
 
-
-                <!-- PHOTO -->
-
-                <div class="klein-photo">
-
-                    <img
-                        src="images/klein-profile.jpg"
-                        alt="Klein William Bugayong">
-
-                </div>
-
-
-                <!-- SMALL NAME -->
-
-                <div class="klein-small-name">
-
+                <div class="klein-sidebar-intro">
                     <h2>
                         KLEIN WILLIAM S.<br>
                         BUGAYONG
@@ -85,57 +50,53 @@
                     <p>
                         Aspiring Developer / IT Student
                     </p>
-
                 </div>
 
 
                 <!-- CONTACT -->
-
                 <section class="klein-side-section">
-
                     <h3>CONTACT</h3>
 
-                    <p>09081588368</p>
+                    <div class="klein-contact-list">
+                        <p>09081588368</p>
 
-                    <p>
-                        #437 Brgy. Camaley,<br>
-                        Binmaley, Pangasinan
-                    </p>
+                        <p>
+                            #437 Brgy. Camaley,<br>
+                            Binmaley, Pangasinan
+                        </p>
 
-                    <p>
-                        kleinwilliambugayong@gmail.com
-                    </p>
+                        <p>
+                            kleinwilliambugayong@gmail.com
+                        </p>
 
-                    <p>
-                        github.com/KleinWilliamBugayong
-                    </p>
-
+                        <p>
+                            github.com/KleinWilliamBugayong
+                        </p>
+                    </div>
                 </section>
 
 
                 <!-- EDUCATION -->
-
                 <section class="klein-side-section">
-
                     <h3>EDUCATION</h3>
 
-                    <strong>
-                        PHINMA University of Pangasinan
-                        (2023 - Present)
-                    </strong>
+                    <div class="klein-side-entry">
+                        <strong>
+                            PHINMA University of Pangasinan
+                        </strong>
 
-                    <p>
-                        Bachelor of Science in
-                        Information Technology
-                    </p>
+                        <span>2023 - Present</span>
 
+                        <p>
+                            Bachelor of Science in
+                            Information Technology
+                        </p>
+                    </div>
                 </section>
 
 
                 <!-- TECHNICAL SKILLS -->
-
                 <section class="klein-side-section">
-
                     <h3>TECHNICAL SKILLS</h3>
 
                     <ul>
@@ -145,40 +106,32 @@
                         <li>UI/UX Prototyping</li>
                         <li>Web and Mobile Development</li>
                     </ul>
-
                 </section>
-
 
             </aside>
 
 
-            <!-- ==========================================
-                 RIGHT SIDE
-            =========================================== -->
-
+            <!-- MAIN CONTENT -->
             <main class="klein-main">
 
-
-                <!-- NAME -->
-
                 <header class="klein-header">
+                    <p class="klein-eyebrow">
+                        CURRICULUM VITAE
+                    </p>
 
                     <h1>
                         KLEIN WILLIAM
                         <span>BUGAYONG</span>
                     </h1>
 
-                    <p>
+                    <p class="klein-title">
                         INFORMATION TECHNOLOGY STUDENT
                     </p>
-
                 </header>
 
 
                 <!-- PROFILE -->
-
                 <section class="klein-section">
-
                     <h2>PROFILE SUMMARY</h2>
 
                     <p>
@@ -188,161 +141,150 @@
                         practical academic projects for web, mobile,
                         and software development.
                     </p>
-
                 </section>
 
 
                 <!-- EDUCATION -->
-
                 <section class="klein-section">
-
                     <h2>EDUCATION</h2>
 
-                    <h3>
-                        PHINMA University of Pangasinan
-                        (2023 - Present)
-                    </h3>
+                    <div class="klein-education-entry">
+                        <div>
+                            <h3>
+                                PHINMA University of Pangasinan
+                            </h3>
 
-                    <p>
-                        Bachelor of Science in Information Technology
-                    </p>
+                            <p>
+                                Bachelor of Science in
+                                Information Technology
+                            </p>
+                        </div>
 
+                        <span>2023 - Present</span>
+                    </div>
                 </section>
 
 
                 <!-- PROJECTS -->
-
-                <section class="klein-section">
-
+                <section class="klein-section klein-projects-section">
                     <h2>MAJOR PROJECTS</h2>
 
 
                     <article class="klein-project">
-
                         <h3>
                             JJK (Jujutsu Kaisen)
                             Interactive Choice-based Game
                         </h3>
 
-                        <strong>
-                            FRESHMEN FINAL PROJECT | 2023 - 2024
-                        </strong>
+                        <div class="klein-project-meta">
+                            <strong>
+                                FRESHMEN FINAL PROJECT | 2023 - 2024
+                            </strong>
 
-                        <em>Python</em>
+                            <span>Python</span>
+                        </div>
 
-                        <ul>
-                            <li>
-                                A choice-based branching story game
-                                inspired by Jujutsu Kaisen where images
-                                and scenarios are presented to the player,
-                                and every decision leads to a different
-                                path and outcome.
-                            </li>
-                        </ul>
-
+                        <p>
+                            A choice-based branching story game
+                            inspired by Jujutsu Kaisen where images
+                            and scenarios are presented to the player,
+                            and every decision leads to a different
+                            path and outcome.
+                        </p>
                     </article>
 
 
                     <article class="klein-project">
-
                         <h3>Tic Tac Toe</h3>
 
-                        <strong>
-                            FRESHMEN FINAL PROJECT | 2024
-                        </strong>
+                        <div class="klein-project-meta">
+                            <strong>
+                                FRESHMEN FINAL PROJECT | 2024
+                            </strong>
 
-                        <em>Java</em>
+                            <span>Java</span>
+                        </div>
 
-                        <ul>
-                            <li>
-                                A classic 3x3 strategy game where two
-                                players compete to align three matching
-                                symbols, with added customization for
-                                user-selected symbols and patterns.
-                            </li>
-                        </ul>
-
+                        <p>
+                            A classic 3x3 strategy game where two
+                            players compete to align three matching
+                            symbols, with added customization for
+                            user-selected symbols and patterns.
+                        </p>
                     </article>
 
 
                     <article class="klein-project">
-
                         <h3>Calorie Tracker</h3>
 
-                        <strong>
-                            FRESHMEN FINAL PROJECT | 2024
-                        </strong>
+                        <div class="klein-project-meta">
+                            <strong>
+                                FRESHMEN FINAL PROJECT | 2024
+                            </strong>
 
-                        <em>
-                            HTML | CSS | Visual Studio Code
-                        </em>
+                            <span>
+                                HTML | CSS | Visual Studio Code
+                            </span>
+                        </div>
 
-                        <ul>
-                            <li>
-                                A calorie tracker website that helps
-                                users manage daily health and nutrition
-                                by setting calorie and water goals,
-                                logging meals and macronutrients, and
-                                tracking progress over time.
-                            </li>
-                        </ul>
-
+                        <p>
+                            A calorie tracker website that helps
+                            users manage daily health and nutrition
+                            by setting calorie and water goals,
+                            logging meals and macronutrients, and
+                            tracking progress over time.
+                        </p>
                     </article>
 
 
                     <article class="klein-project">
-
                         <h3>Coffee Combi</h3>
 
-                        <strong>
-                            SOPHOMORE FINAL PROJECT | 2024 - 2025
-                        </strong>
+                        <div class="klein-project-meta">
+                            <strong>
+                                SOPHOMORE FINAL PROJECT | 2024 - 2025
+                            </strong>
 
-                        <em>
-                            Laravel | Android Studio | PHP |
-                            Kotlin | Figma
-                        </em>
+                            <span>
+                                Laravel | Android Studio |
+                                PHP | Kotlin | Figma
+                            </span>
+                        </div>
 
-                        <ul>
-                            <li>
-                                A coffee ordering app that lets users
-                                create and customize their own coffee
-                                blend by choosing ingredients, flavors,
-                                sweetness level, and other drink
-                                preferences.
-                            </li>
-                        </ul>
-
+                        <p>
+                            A coffee ordering app that lets users
+                            create and customize their own coffee
+                            blend by choosing ingredients, flavors,
+                            sweetness level, and other drink
+                            preferences.
+                        </p>
                     </article>
 
 
                     <article class="klein-project">
-
                         <h3>Artsphere</h3>
 
-                        <strong>
-                            SOPHOMORE FINAL PROJECT | 2025
-                        </strong>
+                        <div class="klein-project-meta">
+                            <strong>
+                                SOPHOMORE FINAL PROJECT | 2025
+                            </strong>
 
-                        <em>
-                            Kotlin | Laravel | PHP |
-                            Android Studio | Figma |
-                            Visual Studio Code
-                        </em>
+                            <span>
+                                Kotlin | Laravel | PHP |
+                                Android Studio | Figma |
+                                Visual Studio Code
+                            </span>
+                        </div>
 
-                        <ul>
-                            <li>
-                                A platform for artists to showcase,
-                                sell, and accept commissions for artwork
-                                while giving buyers direct connections
-                                to artists and a more personalized art
-                                discovery experience across web and
-                                mobile.
-                            </li>
-                        </ul>
-
+                        <p>
+                            A platform for artists to showcase,
+                            sell, and accept commissions for artwork
+                            while giving buyers direct connections
+                            to artists and a more personalized art
+                            discovery experience across web and
+                            mobile.
+                        </p>
                     </article>
-
 
                 </section>
 
@@ -350,45 +292,40 @@
 
         </div>
 
-    </div>
+    </article>
+
 
 
     <!-- ==================================================
-         CV PAGE 2
+         PAGE 2
     =================================================== -->
 
-    <div class="klein-cv-page">
-
-
-        <!-- BLUE HEADER -->
+    <article class="klein-cv-page">
 
         <div class="klein-color-bar">
-
             <div class="bar-dark"></div>
-
             <div class="bar-medium"></div>
-
             <div class="bar-light"></div>
-
         </div>
 
 
         <div class="klein-cv-grid klein-page-two">
 
-
-            <!-- LEFT -->
-
+            <!-- PAGE 2 SIDEBAR -->
             <aside class="klein-sidebar">
+
+                <div class="klein-page-two-label">
+                    KLEIN WILLIAM BUGAYONG
+                </div>
 
 
                 <section class="klein-side-section">
-
                     <h3>
-                        PROGRAMMING<br>
-                        LANGUAGES AND TOOLS
+                        PROGRAMMING LANGUAGES
+                        AND TOOLS
                     </h3>
 
-                    <ul>
+                    <ul class="klein-tools-list">
                         <li>Python</li>
                         <li>Java</li>
                         <li>HTML, CSS, JavaScript</li>
@@ -397,15 +334,15 @@
                         <li>React, Node.js, Express.js</li>
                         <li>MongoDB Atlas</li>
                         <li>Solidity, MetaMask</li>
-                        <li>Vite, Figma, Visual Studio Code</li>
+                        <li>Vite</li>
+                        <li>Figma</li>
+                        <li>Visual Studio Code</li>
                         <li>Android Studio</li>
                     </ul>
-
                 </section>
 
 
                 <section class="klein-side-section">
-
                     <h3>CORE SKILLS</h3>
 
                     <ul>
@@ -417,79 +354,75 @@
                             Written and Verbal Communication
                         </li>
                     </ul>
-
                 </section>
-
 
             </aside>
 
 
-            <!-- RIGHT -->
+            <!-- PAGE 2 MAIN -->
+            <main class="klein-main klein-page-two-main">
 
-            <main class="klein-main">
+                <header class="klein-page-two-header">
+                    <p>PROJECT PORTFOLIO</p>
+
+                    <h1>
+                        MAJOR PROJECTS
+                        <span>CONTINUED</span>
+                    </h1>
+                </header>
 
 
                 <section class="klein-section">
 
-                    <h2>
-                        MAJOR PROJECTS CONTINUED
-                    </h2>
-
-
-                    <article class="klein-project">
-
+                    <article class="klein-project klein-project-large">
                         <h3>InternConnect</h3>
 
-                        <strong>
-                            JUNIOR FINAL PROJECT | 2025
-                        </strong>
+                        <div class="klein-project-meta">
+                            <strong>
+                                JUNIOR FINAL PROJECT | 2025
+                            </strong>
 
-                        <em>
-                            HTML | CSS | Node.js | Figma |
-                            Visual Studio Code | JavaScript
-                        </em>
+                            <span>
+                                HTML | CSS | Node.js | Figma |
+                                Visual Studio Code | JavaScript
+                            </span>
+                        </div>
 
-                        <ul>
-                            <li>
-                                A web-based platform that bridges
-                                students and employers by helping users
-                                discover internships, part-time jobs,
-                                and training opportunities while
-                                allowing organizations to recruit
-                                suitable candidates more efficiently.
-                            </li>
-                        </ul>
-
+                        <p>
+                            A web-based platform that bridges
+                            students and employers by helping users
+                            discover internships, part-time jobs,
+                            and training opportunities while
+                            allowing organizations to recruit
+                            suitable candidates more efficiently.
+                        </p>
                     </article>
 
 
-                    <article class="klein-project">
-
+                    <article class="klein-project klein-project-large">
                         <h3>RentifyPro</h3>
 
-                        <strong>
-                            JUNIOR FINAL PROJECT | 2025 - 2026
-                        </strong>
+                        <div class="klein-project-meta">
+                            <strong>
+                                JUNIOR FINAL PROJECT | 2025 - 2026
+                            </strong>
 
-                        <em>
-                            HTML | MongoDB Atlas | React |
-                            Node.js | MetaMask | Express.js |
-                            Vite | CSS | Solidity
-                        </em>
+                            <span>
+                                HTML | MongoDB Atlas | React |
+                                Node.js | MetaMask | Express.js |
+                                Vite | CSS | Solidity
+                            </span>
+                        </div>
 
-                        <ul>
-                            <li>
-                                An advanced vehicle rental system that
-                                streamlines browsing, booking, and
-                                online payment while improving security
-                                and transparency through modern web
-                                technologies and blockchain-based
-                                transaction support.
-                            </li>
-                        </ul>
-
+                        <p>
+                            An advanced vehicle rental system that
+                            streamlines browsing, booking, and
+                            online payment while improving security
+                            and transparency through modern web
+                            technologies and blockchain-based
+                            transaction support.
+                        </p>
                     </article>
-
 
                 </section>
 
@@ -497,23 +430,22 @@
 
         </div>
 
-    </div>
+    </article>
+
 
 
     <!-- BOTTOM CONTROLS -->
-
     <div class="klein-bottom">
 
         <a href="index.html">
             ← Back to Profiles
         </a>
 
-        <a href="clarence.html">
-            View Clarence's CV →
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            ↑ Back to Top
         </a>
 
     </div>
-
 
 </body>
 </html>
