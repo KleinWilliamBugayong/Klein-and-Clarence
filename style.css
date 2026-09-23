@@ -1,5 +1,5 @@
 /* ==========================================================
-   CLARENCE CV - FINAL DESIGN FIX
+   CLARENCE CV - FINAL DESIGN
    ONLY AFFECTS CLARENCE
 ========================================================== */
 
@@ -46,7 +46,7 @@ body.clarence-page .cv-header {
 body.clarence-page .cv-header h1 {
     margin: 0;
 
-    color: #171717;
+    color: #171717 !important;
 
     font-size: 44px;
     font-weight: 800;
@@ -62,16 +62,15 @@ body.clarence-page .cv-header h1 {
 body.clarence-page .cv-grid {
     display: grid;
 
-    grid-template-columns:
-        30% 70%;
+    grid-template-columns: 30% 70%;
 
     align-items: stretch;
 }
 
 
-/* =========================
+/* ==========================================================
    LEFT SIDE
-========================= */
+========================================================== */
 
 body.clarence-page .cv-left {
     padding: 40px 30px;
@@ -89,14 +88,16 @@ body.clarence-page .cv-left .cv-section {
 }
 
 
-/* LEFT HEADINGS */
+/* =========================
+   LEFT SECTION TITLES
+========================= */
 
 body.clarence-page .cv-left .cv-section h2 {
     margin: 0 0 15px;
 
     padding-bottom: 8px;
 
-    color: #e4c88b;
+    color: #f0d48f !important;
 
     font-size: 16px;
     font-weight: 800;
@@ -107,78 +108,86 @@ body.clarence-page .cv-left .cv-section h2 {
 }
 
 
+/* SOFT / TECHNICAL */
+
 body.clarence-page .cv-left .cv-section h3 {
     margin: 18px 0 8px;
 
-    color: #ffffff;
+    color: #ffffff !important;
 
     font-size: 13px;
     font-weight: 700;
 }
 
 
-/* LEFT TEXT */
+/* =========================
+   LEFT NORMAL TEXT
+========================= */
 
-body.clarence-page .cv-left p {
+body.clarence-page .cv-left p,
+body.clarence-page .cv-left .cv-section p {
     margin: 6px 0;
 
-    color: #d8d8d8;
+    color: #d8d8d8 !important;
 
     font-size: 13px;
     line-height: 1.5;
 }
 
 
-body.clarence-page .cv-left strong {
-    color: #ffffff;
+/* LEFT BOLD TEXT */
+
+body.clarence-page .cv-left strong,
+body.clarence-page .cv-left .cv-section strong {
+    color: #ffffff !important;
 
     font-size: 13px;
     line-height: 1.5;
 }
 
 
-/* CONTACT LINKS */
+/* =========================
+   CONTACT LINKS
+========================= */
 
-body.clarence-page .cv-left a {
-    color: #d8d8d8;
+body.clarence-page .cv-left a,
+body.clarence-page .cv-left .cv-section a {
+    color: #d8d8d8 !important;
 
     text-decoration: none;
 
     overflow-wrap: anywhere;
 }
 
-
 body.clarence-page .cv-left a:hover {
-    color: #e4c88b;
+    color: #f0d48f !important;
 }
 
 
-/* =========================
+/* ==========================================================
    EDUCATION
-========================= */
+========================================================== */
 
 body.clarence-page .education-item {
     margin-bottom: 22px;
 }
-
 
 body.clarence-page .education-item strong {
     display: block;
 
     margin-bottom: 5px;
 
-    color: #ffffff;
+    color: #ffffff !important;
+}
+
+body.clarence-page .cv-left .education-item p {
+    color: #d0d0d0 !important;
 }
 
 
-body.clarence-page .education-item p {
-    color: #c8c8c8;
-}
-
-
-/* =========================
+/* ==========================================================
    RIGHT SIDE
-========================= */
+========================================================== */
 
 body.clarence-page .cv-right {
     padding: 40px 45px 50px;
@@ -189,7 +198,9 @@ body.clarence-page .cv-right {
 }
 
 
-/* PROFILE */
+/* =========================
+   PROFILE
+========================= */
 
 body.clarence-page .cv-profile {
     margin-bottom: 30px;
@@ -199,32 +210,30 @@ body.clarence-page .cv-profile {
     border-bottom: 1px solid #c9c9c9;
 }
 
-
 body.clarence-page .cv-profile p {
     margin: 0;
 
-    color: #333333;
+    color: #333333 !important;
 
     font-size: 14px;
     line-height: 1.7;
 }
 
 
-/* =========================
+/* ==========================================================
    RIGHT SECTIONS
-========================= */
+========================================================== */
 
 body.clarence-page .cv-right .cv-section {
     margin-bottom: 32px;
 }
-
 
 body.clarence-page .cv-right .cv-section h2 {
     margin: 0 0 17px;
 
     padding-bottom: 7px;
 
-    color: #171717;
+    color: #171717 !important;
 
     font-size: 18px;
     font-weight: 800;
@@ -234,25 +243,27 @@ body.clarence-page .cv-right .cv-section h2 {
     border-bottom: 2px solid #333333;
 }
 
+body.clarence-page .cv-right .cv-section h3 {
+    color: #171717 !important;
+}
 
 body.clarence-page .cv-right .cv-section p {
     margin: 7px 0;
 
-    color: #333333;
+    color: #333333 !important;
 
     font-size: 13px;
     line-height: 1.6;
 }
 
-
 body.clarence-page .cv-right .cv-section strong {
-    color: #171717;
+    color: #171717 !important;
 }
 
 
-/* =========================
+/* ==========================================================
    PROJECTS
-========================= */
+========================================================== */
 
 body.clarence-page .project {
     margin-bottom: 28px;
@@ -262,16 +273,13 @@ body.clarence-page .project {
     border-bottom: 1px solid #d3d3d3;
 }
 
-
 body.clarence-page .project:last-child {
     border-bottom: none;
 }
 
-
 body.clarence-page .project p {
-    color: #333333;
+    color: #333333 !important;
 }
-
 
 body.clarence-page .project ul {
     margin: 12px 0 0;
@@ -279,28 +287,25 @@ body.clarence-page .project ul {
     padding-left: 22px;
 }
 
-
 body.clarence-page .project li {
     margin-bottom: 7px;
 
-    color: #333333;
+    color: #333333 !important;
 
     font-size: 13px;
     line-height: 1.55;
 }
 
 
-/* =========================
+/* ==========================================================
    NAVIGATION
-========================= */
+========================================================== */
 
 body.clarence-page .cv-navigation {
-    padding:
-        0 0 40px 30px;
+    padding: 0 0 40px 30px;
 
     background: #f7f7f7;
 }
-
 
 body.clarence-page .back-btn {
     display: inline-block;
@@ -309,7 +314,7 @@ body.clarence-page .back-btn {
 
     background: #202020;
 
-    color: #ffffff;
+    color: #ffffff !important;
 
     border-radius: 5px;
 
@@ -321,17 +326,18 @@ body.clarence-page .back-btn {
     transition: 0.25s ease;
 }
 
-
 body.clarence-page .back-btn:hover {
     background: #333333;
+
+    color: #ffffff !important;
 
     transform: translateY(-2px);
 }
 
 
-/* =========================
+/* ==========================================================
    MOBILE
-========================= */
+========================================================== */
 
 @media screen and (max-width: 700px) {
 
@@ -339,11 +345,9 @@ body.clarence-page .back-btn:hover {
         padding: 15px 8px;
     }
 
-
     body.clarence-page .cv-header {
         padding: 30px 22px 25px;
     }
-
 
     body.clarence-page .cv-header h1 {
         font-size: 29px;
@@ -351,32 +355,27 @@ body.clarence-page .back-btn:hover {
         letter-spacing: 1px;
     }
 
-
     body.clarence-page .cv-grid {
         grid-template-columns: 1fr;
     }
-
 
     body.clarence-page .cv-left {
         padding: 30px 22px;
     }
 
-
     body.clarence-page .cv-right {
         padding: 30px 22px;
     }
 
-
     body.clarence-page .cv-navigation {
-        padding:
-            0 22px 30px;
+        padding: 0 22px 30px;
     }
 }
 
 
-/* =========================
+/* ==========================================================
    PRINT
-========================= */
+========================================================== */
 
 @media print {
 
@@ -386,7 +385,6 @@ body.clarence-page .back-btn:hover {
         background: #ffffff;
     }
 
-
     body.clarence-page .cv {
         width: 100%;
 
@@ -394,7 +392,6 @@ body.clarence-page .back-btn:hover {
 
         box-shadow: none;
     }
-
 
     body.clarence-page .cv-navigation {
         display: none;
