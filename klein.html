@@ -1,16 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Klein William Bugayong</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klein William Bugayong CV</title>
+
+<style>
+body{
+    margin:0;
+    background:#d9d9d9;
+    font-family:Arial,sans-serif;
+}
+
+.back{
+    display:inline-block;
+    margin:15px;
+    text-decoration:none;
+    color:#0b5ed7;
+    font-weight:bold;
+}
+
+.cv{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.cv img.template{
+    width:100%;
+    display:block;
+}
+
+.profile{
+    position:absolute;
+    top:75px;
+    left:53px;
+    width:145px;
+    height:145px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid white;
+    background:white;
+}
+
+.upload{
+    position:absolute;
+    top:230px;
+    left:35px;
+    width:180px;
+    opacity:0;
+    cursor:pointer;
+}
+
+.upload-label{
+    position:absolute;
+    top:230px;
+    left:35px;
+    width:180px;
+    text-align:center;
+    background:#1d4ed8;
+    color:white;
+    padding:8px;
+    border-radius:8px;
+    font-size:14px;
+    cursor:pointer;
+}
+</style>
 </head>
+
 <body>
 
 <a href="index.html" class="back">← Back to Home</a>
 
-<div class="cv-page">
-    <img src="klein-cv.jpg" alt="Klein CV" class="full-cv">
+<div class="cv">
+
+<img src="cv-template.jpg" class="template">
+
+<img src="default-photo.jpg" id="photo" class="profile">
+
+<label class="upload-label" for="uploadPhoto">
+Change Photo
+</label>
+
+<input type="file" id="uploadPhoto" class="upload" accept="image/*">
+
 </div>
+
+<script>
+const input=document.getElementById("uploadPhoto");
+const photo=document.getElementById("photo");
+
+input.onchange=function(){
+    const file=this.files[0];
+    if(file){
+        photo.src=URL.createObjectURL(file);
+    }
+}
+</script>
 
 </body>
 </html>
