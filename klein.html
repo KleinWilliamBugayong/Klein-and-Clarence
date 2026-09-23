@@ -1,89 +1,502 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Klein William Bugayong | CV</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-<body class="cv-page">
+<body class="resume-body">
+
+    <div class="resume-actions">
+        <a href="index.html" class="resume-back">← Back to Profiles</a>
+        <button onclick="window.print()">Print / Save PDF</button>
+    </div>
 
 
-    <nav class="cv-navbar">
+    <!-- =========================
+         PAGE 1
+    ========================== -->
 
-        <a href="index.html" class="back-button">
-            ← Back
-        </a>
+    <main class="resume-page">
 
-        <div class="cv-name">
-            Klein William Bugayong
-        </div>
-
-        <a href="clarence.html" class="switch-button">
-            Clarence's CV →
-        </a>
-
-    </nav>
-
-
-    <main class="cv-viewer">
-
-
-        <div class="cv-heading">
-
-            <p>CURRICULUM VITAE</p>
-
-            <h1>
-                Klein William Bugayong
-            </h1>
-
-            <span>
-                Information Technology Student
-            </span>
-
+        <!-- TOP BLUE DESIGN -->
+        <div class="resume-top">
+            <div class="blue-dark"></div>
+            <div class="blue-medium"></div>
+            <div class="blue-light"></div>
         </div>
 
 
-        <div class="cv-images">
+        <div class="resume-layout">
 
 
-            <!-- KLEIN CV PAGE 1 -->
+            <!-- =====================
+                 LEFT SIDE
+            ====================== -->
 
-            <img
-                src="images/klein-cv-1.png"
-                alt="Klein CV Page 1">
+            <aside class="resume-sidebar">
+
+                <div class="resume-photo">
+
+                    <!-- KLEIN'S PROFILE PHOTO -->
+                    <img
+                        src="images/klein-profile.jpg"
+                        alt="Klein William Bugayong">
+
+                </div>
 
 
-            <!-- KLEIN CV PAGE 2 -->
+                <div class="sidebar-name">
 
-            <img
-                src="images/klein-cv-2.png"
-                alt="Klein CV Page 2">
+                    <h2>
+                        KLEIN WILLIAM S.<br>
+                        BUGAYONG
+                    </h2>
 
+                    <strong>
+                        Aspiring Developer / IT Student
+                    </strong>
+
+                </div>
+
+
+                <!-- CONTACT -->
+
+                <section class="sidebar-section">
+
+                    <h3>CONTACT</h3>
+
+                    <p>09081588368</p>
+
+                    <p>
+                        #437 Brgy. Camaley,
+                        Binmaley, Pangasinan
+                    </p>
+
+                    <p>
+                        kleinwilliambugayong@gmail.com
+                    </p>
+
+                    <p>
+                        github.com/KleinWilliamBugayong
+                    </p>
+
+                </section>
+
+
+                <!-- EDUCATION -->
+
+                <section class="sidebar-section">
+
+                    <h3>EDUCATION</h3>
+
+                    <strong>
+                        PHINMA University of Pangasinan<br>
+                        (2023 - Present)
+                    </strong>
+
+                    <p>
+                        Bachelor of Science in
+                        Information Technology
+                    </p>
+
+                </section>
+
+
+                <!-- TECHNICAL SKILLS -->
+
+                <section class="sidebar-section">
+
+                    <h3>TECHNICAL SKILLS</h3>
+
+                    <ul>
+                        <li>Software Development</li>
+                        <li>Project Management</li>
+                        <li>Troubleshooting</li>
+                        <li>UI/UX Prototyping</li>
+                        <li>Web and Mobile Development</li>
+                    </ul>
+
+                </section>
+
+            </aside>
+
+
+
+            <!-- =====================
+                 RIGHT SIDE
+            ====================== -->
+
+            <section class="resume-main">
+
+
+                <!-- NAME -->
+
+                <header class="resume-header">
+
+                    <h1>
+                        KLEIN WILLIAM
+                        <span>BUGAYONG</span>
+                    </h1>
+
+                    <p>
+                        INFORMATION TECHNOLOGY STUDENT
+                    </p>
+
+                </header>
+
+
+
+                <!-- PROFILE SUMMARY -->
+
+                <section class="resume-section">
+
+                    <h2>PROFILE SUMMARY</h2>
+
+                    <p>
+                        Bachelor of Science in Information Technology
+                        student at PHINMA University of Pangasinan with
+                        hands-on experience in building interactive and
+                        practical academic projects for web, mobile, and
+                        software development.
+                    </p>
+
+                </section>
+
+
+
+                <!-- EDUCATION -->
+
+                <section class="resume-section">
+
+                    <h2>EDUCATION</h2>
+
+                    <h3>
+                        PHINMA University of Pangasinan
+                        (2023 - Present)
+                    </h3>
+
+                    <p>
+                        Bachelor of Science in Information Technology
+                    </p>
+
+                </section>
+
+
+
+                <!-- PROJECTS -->
+
+                <section class="resume-section">
+
+                    <h2>MAJOR PROJECTS</h2>
+
+
+                    <!-- JJK -->
+
+                    <div class="project">
+
+                        <h3>
+                            JJK (Jujutsu Kaisen)
+                            Interactive Choice-based Game
+                        </h3>
+
+                        <strong>
+                            FRESHMEN FINAL PROJECT | 2023 - 2024
+                        </strong>
+
+                        <em>Python</em>
+
+                        <ul>
+                            <li>
+                                A choice-based branching story game
+                                inspired by Jujutsu Kaisen where images
+                                and scenarios are presented to the player,
+                                and every decision leads to a different
+                                path and outcome.
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+
+                    <!-- TIC TAC TOE -->
+
+                    <div class="project">
+
+                        <h3>Tic Tac Toe</h3>
+
+                        <strong>
+                            FRESHMEN FINAL PROJECT | 2024
+                        </strong>
+
+                        <em>Java</em>
+
+                        <ul>
+                            <li>
+                                A classic 3x3 strategy game where two
+                                players compete to align three matching
+                                symbols, with added customization for
+                                user-selected symbols and patterns.
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+
+                    <!-- CALORIE TRACKER -->
+
+                    <div class="project">
+
+                        <h3>Calorie Tracker</h3>
+
+                        <strong>
+                            FRESHMEN FINAL PROJECT | 2024
+                        </strong>
+
+                        <em>
+                            HTML | CSS | Visual Studio Code
+                        </em>
+
+                        <ul>
+                            <li>
+                                A calorie tracker website that helps
+                                users manage daily health and nutrition
+                                by setting calorie and water goals,
+                                logging meals and macronutrients, and
+                                tracking progress over time.
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+
+                    <!-- COFFEE COMBI -->
+
+                    <div class="project">
+
+                        <h3>Coffee Combi</h3>
+
+                        <strong>
+                            SOPHOMORE FINAL PROJECT | 2024 - 2025
+                        </strong>
+
+                        <em>
+                            Laravel | Android Studio | PHP |
+                            Kotlin | Figma
+                        </em>
+
+                        <ul>
+                            <li>
+                                A coffee ordering app that lets users
+                                create and customize their own coffee
+                                blend by choosing ingredients, flavors,
+                                sweetness level, and other drink
+                                preferences.
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+
+                    <!-- ARTSPHERE -->
+
+                    <div class="project">
+
+                        <h3>Artsphere</h3>
+
+                        <strong>
+                            SOPHOMORE FINAL PROJECT | 2025
+                        </strong>
+
+                        <em>
+                            Kotlin | Laravel | PHP |
+                            Android Studio | Figma |
+                            Visual Studio Code
+                        </em>
+
+                        <ul>
+                            <li>
+                                A platform for artists to showcase,
+                                sell, and accept commissions for artwork
+                                while giving buyers direct connections
+                                to artists and a more personalized art
+                                discovery experience across web and
+                                mobile.
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                </section>
+
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         PAGE 2
+    ========================== -->
+
+    <main class="resume-page second-page">
+
+
+        <div class="resume-top">
+
+            <div class="blue-dark"></div>
+            <div class="blue-medium"></div>
+            <div class="blue-light"></div>
 
         </div>
 
 
-        <div class="bottom-navigation">
+        <div class="resume-layout page-two-layout">
 
-            <a href="index.html">
-                ← Back to Profiles
-            </a>
 
-            <a href="clarence.html">
-                View Clarence's CV →
-            </a>
+            <!-- LEFT -->
+
+            <aside class="resume-sidebar page-two-sidebar">
+
+
+                <!-- PROGRAMMING -->
+
+                <section class="sidebar-section">
+
+                    <h3>
+                        PROGRAMMING<br>
+                        LANGUAGES AND TOOLS
+                    </h3>
+
+                    <ul>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>PHP, Laravel</li>
+                        <li>Kotlin</li>
+                        <li>React, Node.js, Express.js</li>
+                        <li>MongoDB Atlas</li>
+                        <li>Solidity, MetaMask</li>
+                        <li>Vite, Figma, Visual Studio Code</li>
+                        <li>Android Studio</li>
+                    </ul>
+
+                </section>
+
+
+
+                <!-- CORE SKILLS -->
+
+                <section class="sidebar-section">
+
+                    <h3>CORE SKILLS</h3>
+
+                    <ul>
+                        <li>Problem Solving</li>
+                        <li>Teamwork and Collaboration</li>
+                        <li>Analytical Thinking</li>
+                        <li>Creativity</li>
+                        <li>Written and Verbal Communication</li>
+                    </ul>
+
+                </section>
+
+
+            </aside>
+
+
+
+            <!-- RIGHT -->
+
+            <section class="resume-main">
+
+
+                <section class="resume-section">
+
+                    <h2>
+                        MAJOR PROJECTS CONTINUED
+                    </h2>
+
+
+
+                    <!-- INTERNCONNECT -->
+
+                    <div class="project">
+
+                        <h3>InternConnect</h3>
+
+                        <strong>
+                            JUNIOR FINAL PROJECT | 2025
+                        </strong>
+
+                        <em>
+                            HTML | CSS | Node.js | Figma |
+                            Visual Studio Code | JavaScript
+                        </em>
+
+                        <ul>
+                            <li>
+                                A web-based platform that bridges
+                                students and employers by helping users
+                                discover internships, part-time jobs,
+                                and training opportunities while
+                                allowing organizations to recruit
+                                suitable candidates more efficiently.
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+
+                    <!-- RENTIFYPRO -->
+
+                    <div class="project">
+
+                        <h3>RentifyPro</h3>
+
+                        <strong>
+                            JUNIOR FINAL PROJECT | 2025 - 2026
+                        </strong>
+
+                        <em>
+                            HTML | MongoDB Atlas | React |
+                            Node.js | MetaMask | Express.js |
+                            Vite | CSS | Solidity
+                        </em>
+
+                        <ul>
+                            <li>
+                                An advanced vehicle rental system that
+                                streamlines browsing, booking, and online
+                                payment while improving security and
+                                transparency through modern web
+                                technologies and blockchain-based
+                                transaction support.
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                </section>
+
+            </section>
+
 
         </div>
-
 
     </main>
 
